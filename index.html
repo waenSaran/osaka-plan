@@ -438,6 +438,13 @@
       box-shadow: var(--shadow-md);
     }
 
+    .step-card.open .step-title-group h4,
+    .step-card.open .step-title-group p.subtitle {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+    }
+
     .step-details {
       overflow: hidden;
     }
@@ -1234,34 +1241,34 @@
      <div class="day-selector">
       <div class="day-pill active" onclick="switchDay(1)">
        <span class="d-no">Day 1</span>
-       <span class="d-date">7 Nov</span>
+       <span class="d-date">เสาร์ 7 Nov (Sat)</span>
       </div>
       <div class="day-pill" onclick="switchDay(2)">
        <span class="d-no">Day 2</span>
-       <span class="d-date">8 Nov</span>
+       <span class="d-date">อาทิตย์ 8 Nov (Sun)</span>
       </div>
       <div class="day-pill" onclick="switchDay(3)">
        <span class="d-no">Day 3</span>
-       <span class="d-date">9 Nov</span>
+       <span class="d-date">จันทร์ 9 Nov (Mon)</span>
       </div>
       <div class="day-pill" onclick="switchDay(4)">
        <span class="d-no">Day 4</span>
-       <span class="d-date">10 Nov</span>
+       <span class="d-date">อังคาร 10 Nov (Tue)</span>
       </div>
       <div class="day-pill" onclick="switchDay(5)">
        <span class="d-no">Day 5</span>
-       <span class="d-date">11 Nov</span>
+       <span class="d-date">พุธ 11 Nov (Wed)</span>
       </div>
       <div class="day-pill" onclick="switchDay(6)">
        <span class="d-no">Day 6</span>
-       <span class="d-date">12 Nov</span>
+       <span class="d-date">พฤหัส 12 Nov (Thu)</span>
       </div>
      </div>
 
      <!-- DAY 1 CONTENT -->
      <div class="day-content active" id="day-pane-1">
       <div class="day-theme-box">
-       <p>ถึงสนามบิน + วัดคัตสึโอจิ (Katsuoji) + แสงสีย่าน Dotonbori</p>
+       <p>ถึงสนามบิน + แวะช้อป Rinku Outlets + วัดคัตสึโอจิ (Katsuoji) + Dotonbori</p>
       </div>
 
       <div class="timeline-list">
@@ -1298,8 +1305,65 @@
          <div class="step-card-header">
           <span class="step-time">09:30</span>
           <div class="step-title-group">
-           <h4>เดินทาง: KIX ➔ Namba</h4>
-           <p class="subtitle">เดินทางเข้าเมืองโอซาก้าด้วยรถไฟ Nankai</p>
+           <h4>เดินทาง: KIX ➔ Rinku-Town</h4>
+           <p class="subtitle">นั่งรถไฟ Nankai / JR เพียง 1 สถานี</p>
+          </div>
+          <span class="chevron-icon">▼</span>
+         </div>
+         <div class="step-details-wrapper">
+          <div class="step-details">
+           <div class="step-details-content">
+            เดินทางจากสนามบินคันไซไปยังสถานี Rinku-Town
+            <div class="sub-timeline-box">
+             <div class="sub-route-item selected">
+              <strong>Nankai / JR Line:</strong> Kansai Airport Station (KIX) ➔ Rinku-Town Station (6 นาที / 💵 ¥380)
+             </div>
+            </div>
+            <div class="micro-badges">
+             <span class="m-badge time">⏱️ ~6 นาที</span>
+             <span class="m-badge price">💵 ¥380</span>
+             <span class="m-badge transit">🚇 Train</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="timeline-step">
+        <div class="step-marker"></div>
+        <div class="step-card" onclick="toggleStepDetails(this)">
+         <div class="step-card-header">
+          <span class="step-time">09:40</span>
+          <div class="step-title-group">
+           <h4>ช้อปปิ้ง: Rinku Premium Outlets</h4>
+           <p class="subtitle">แวะช้อปปิ้งเสื้อผ้ากันหนาว Heattech</p>
+          </div>
+          <span class="chevron-icon">▼</span>
+         </div>
+         <div class="step-details-wrapper">
+          <div class="step-details">
+           <div class="step-details-content">
+            ฝากกระเป๋าเดินทางที่ตู้ล็อคเกอร์ในสถานีรถไฟหรือบริเวณเอาท์เล็ท แล้วช้อปปิ้งเสื้อผ้ากันหนาว
+            <div class="micro-badges">
+             <span class="m-badge time">⏱️ ~1.5 - 2 ชม.</span>
+             <span class="m-badge price">💵 ตามอัธยาศัย</span>
+             <span class="m-badge transit">🚶 เดินเท้า</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="timeline-step">
+        <div class="step-marker"></div>
+        <div class="step-card" onclick="toggleStepDetails(this)">
+         <div class="step-card-header">
+          <span class="step-time">11:30</span>
+          <div class="step-title-group">
+           <h4>เดินทาง: Rinku-Town ➔ Namba</h4>
+           <p class="subtitle">เดินทางเข้าเมืองโอซาก้าด้วยรถไฟด่วน Nankai</p>
           </div>
           <span class="chevron-icon">▼</span>
          </div>
@@ -1309,19 +1373,12 @@
             เดินทางเข้าเมืองโอซาก้า มุ่งหน้าสู่สถานี Namba
             <div class="sub-timeline-box">
              <div class="sub-route-item selected">
-              <span class="m-badge main-choice">✅ วิธีหลัก</span>
-              <strong>Nankai Airport Express</strong> (45 นาที / 💵 ¥970)<br>
-              <span style="font-size: 0.76rem;">วิ่งแบบรถไฟธรรมดา ไม่ต้องจองที่นั่งล่วงหน้า</span>
-             </div>
-             <div class="sub-route-item" style="opacity: 0.7;">
-              <span class="m-badge option">ทางเลือก</span>
-              <strong>Nankai Rapi:t (Ltd Exp)</strong> (34 นาที / 💵 ¥1,410)<br>
-              <span style="font-size: 0.76rem;">ต้องจองระบุที่นั่ง เก้าอี้สบาย มีที่วางสัมภาระใหญ่</span>
+              <strong>Nankai Airport Express:</strong> Rinku-Town Station ➔ Namba Station (40 นาที / 💵 ¥790)
              </div>
             </div>
             <div class="micro-badges">
-             <span class="m-badge time">⏱️ ~45 นาที</span>
-             <span class="m-badge price">💵 ¥970</span>
+             <span class="m-badge time">⏱️ ~40 นาที</span>
+             <span class="m-badge price">💵 ¥790</span>
              <span class="m-badge transit">🚇 Nankai Line</span>
             </div>
            </div>
@@ -1334,7 +1391,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">10:30</span>
+          <span class="step-time">12:15</span>
           <div class="step-title-group">
            <h4>โรงแรม: Welina Hotel</h4>
            <p class="subtitle">เดินทางไปฝากกระเป๋าเดินทางที่โรงแรม</p>
@@ -1344,7 +1401,7 @@
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            เดินทางเท้าจากสถานี Namba ไปยังโรงแรมในย่านชินไซบาชิเพื่อฝากกระเป๋าเดินทางไว้ก่อนออกเดินทางต่อ
+            เดินเท้าจากสถานี Namba ไปยังโรงแรม Welina Hotel Premier Shinsaibashi เพื่อฝากสัมภาระชิ้นใหญ่ทั้งหมดไว้ที่ล็อบบี้ก่อนออกเดินทางต่อ
             <div class="micro-badges">
              <span class="m-badge time">⏱️ เดิน ~15 นาที</span>
              <span class="m-badge price">💵 ฟรี</span>
@@ -1360,7 +1417,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">11:00</span>
+          <span class="step-time">12:35</span>
           <div class="step-title-group">
            <h4>เดินทาง: Namba ➔ Katsuoji</h4>
            <p class="subtitle">เดินทางขึ้นเหนือสู่ Minoh ไปวัดคัตสึโอจิ</p>
@@ -1372,13 +1429,13 @@
            <div class="step-details-content">
             เดินทางขึ้นเหนือสู่สถานี Minoh-kayano แล้วต่อรถบัส Hankyu ไปยังตัววัด
             <div class="sub-timeline-box">
-             <div class="sub-route-item selected">
-              <strong>1. Metro Midosuji Line:</strong> Shinsaibashi ➔ Minoh-kayano (35 นาที / 💵 ¥500)
+              <div class="sub-route-item selected">
+               <strong>1. Metro Midosuji Line:</strong> Shinsaibashi Station ➔ Minoh-kayano Station (35 นาที / 💵 ¥500)
+              </div>
+              <div class="sub-route-item selected">
+               <strong>2. Hankyu Bus (Stop 8):</strong> Minoh-kayano Station (ชานชาลา 8) ➔ Katsuoji Temple Bus Stop (25 นาที / 💵 ¥800)
+              </div>
              </div>
-             <div class="sub-route-item selected">
-              <strong>2. Hankyu Bus (Stop 8):</strong> Minoh-kayano ➔ Katsuoji Temple (25 นาที / 💵 ¥800)
-             </div>
-            </div>
             <div class="micro-badges">
              <span class="m-badge time">⏱️ ~1.5 ชม. (รวมบัส)</span>
              <span class="m-badge price">💵 ¥1,300</span>
@@ -1394,7 +1451,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">12:30</span>
+          <span class="step-time">13:55</span>
           <div class="step-title-group">
            <h4>สถานที่: วัดคัตสึโอจิ (Katsuoji)</h4>
            <p class="subtitle">วัดตุ๊กตาดารุมะนำโชคแห่งชัยชนะ</p>
@@ -1420,7 +1477,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">15:00</span>
+          <span class="step-time">16:20</span>
           <div class="step-title-group">
            <h4>เดินทาง: วัดคัตสึโอจิ ➔ Namba</h4>
            <p class="subtitle">เดินทางย้อนกลับเข้าสู่ย่านใจกลางเมือง</p>
@@ -1430,7 +1487,15 @@
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            นั่งรถบัส Hankyu กลับสถานี Minoh-kayano (รอบบัสขากลับ 15:00 / 15:10 / 15:20) แล้วต่อรถไฟใต้ดินสายสีแดง Midosuji ยาวเข้าเมือง
+            นั่งรถบัส Hankyu กลับสถานี Minoh-kayano แล้วต่อรถไฟใต้ดินสายสีแดง Midosuji ยาวกลับเข้าที่พักย่าน Namba / Shinsaibashi
+             <div class="sub-timeline-box">
+              <div class="sub-route-item selected">
+               <strong>1. Hankyu Bus (Stop at Temple):</strong> Katsuoji Temple Bus Stop ➔ Minoh-kayano Station (25 นาที / 💵 ¥800)
+              </div>
+              <div class="sub-route-item selected">
+               <strong>2. Metro Midosuji Line:</strong> Minoh-kayano Station ➔ Shinsaibashi Station (Namba) (37 นาที / 💵 ¥500)
+              </div>
+             </div>
             <div class="micro-badges">
              <span class="m-badge time">⏱️ ~1.5 ชม. (รวมบัส)</span>
              <span class="m-badge price">💵 ¥1,300</span>
@@ -1446,7 +1511,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">16:30</span>
+          <span class="step-time">17:45</span>
           <div class="step-title-group">
            <h4>พักผ่อน: กลับถึงย่าน Namba</h4>
            <p class="subtitle">พักชาร์จแบตเตอรี่ในโรงแรมก่อนเที่ยวช่วงเย็น</p>
@@ -1472,7 +1537,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">18:00</span>
+          <span class="step-time">18:30</span>
           <div class="step-title-group">
            <h4>แลนด์มาร์ค: Dotonbori (กูลิโกะ)</h4>
            <p class="subtitle">ถ่ายภาพคู่กับป้ายไฟนีออนในตำนาน</p>
@@ -1498,7 +1563,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">19:00</span>
+          <span class="step-time">19:15</span>
           <div class="step-title-group">
            <h4>มื้อค่ำ: Nikoniko Nabe Dotonbori</h4>
            <p class="subtitle">ทานสุกี้ยากี้/ชาบูอุ่นๆ แสนอร่อย</p>
@@ -1524,7 +1589,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">20:30</span>
+          <span class="step-time">20:45</span>
           <div class="step-title-group">
            <h4>พักผ่อน: Dotonbori &amp; Namba</h4>
            <p class="subtitle">เดินช้อปปิ้งเก็บตกของฝากและดองกี้ส่งท้ายวันแรก</p>
@@ -1550,7 +1615,7 @@
 
       <div class="daily-cost-card">
        <span>💰</span>
-       <span>ค่าเดินทางวันนี้: ~¥3,570 - ¥4,010 / คน</span>
+       <span>ค่าเดินทางวันนี้: ~¥3,770 / คน</span>
       </div>
      </div>
 
@@ -1579,10 +1644,13 @@
             นั่งรถไฟใต้ดินข้ามเมือง เลี่ยงเมืองเกียวโต ตรงสู่ธรรมชาติอาราชิยามาทางทิศตะวันตก
             <div class="sub-timeline-box">
              <div class="sub-route-item selected">
-              <strong>1. Metro Midosuji:</strong> Namba ➔ Umeda (8 นาที / 💵 ¥240)
+              <strong>1. Metro Midosuji Line:</strong> Namba Station ➔ Umeda Station (8 นาที / 💵 ¥240)
              </div>
              <div class="sub-route-item selected">
-              <strong>2. Hankyu Kyoto Line:</strong> Umeda ➔ Katsura ➔ Arashiyama (42 นาที / 💵 ¥410)
+              <strong>2. Hankyu Kyoto Line (Ltd Exp):</strong> Osaka-Umeda Station ➔ Katsura Station (35 นาที)
+             </div>
+             <div class="sub-route-item selected">
+              <strong>3. Hankyu Arashiyama Line:</strong> Katsura Station ➔ Arashiyama Station (7 นาที / 💵 รวม Hankyu ¥410)
              </div>
             </div>
             <div class="micro-badges">
@@ -1636,11 +1704,22 @@
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            เดินทางกลับโดย Hankyu Line จาก Arashiyama ➔ Katsura ➔ Karasuma (40 นาที) แล้วเดินเข้าตลาดนิชิกิ ชิมของกินและขนมหวานตามชอบ
+            เดินทางจาก Arashiyama เข้าสู่ใจกลางเกียวโตเพื่อเที่ยวตลาดนิชิกิ
+            <div class="sub-timeline-box">
+              <div class="sub-route-item selected">
+               <strong>1. Hankyu Arashiyama Line:</strong> Hankyu Arashiyama Station ➔ Hankyu Katsura Station (7 นาที / เปลี่ยนขบวน)
+              </div>
+              <div class="sub-route-item selected">
+               <strong>2. Hankyu Kyoto Line (Ltd Exp):</strong> Hankyu Katsura Station ➔ Hankyu Karasuma Station (18 นาที / 💵 รวม Hankyu ¥240)
+              </div>
+              <div class="sub-route-item selected">
+               <strong>3. Walk:</strong> Hankyu Karasuma Station (ทางออก 16) ➔ ตลาดนิชิกิ (Nishiki Market) (เดินเท้า ~3-5 นาที)
+              </div>
+             </div>
             <div class="micro-badges">
              <span class="m-badge time">⏱️ ~2 ชม. (รวมช้อป)</span>
-             <span class="m-badge price">💵 ¥240 (ค่ารถ)</span>
-             <span class="m-badge transit">🚇 Hankyu ➔ 🚶 เดิน</span>
+             <span class="m-badge price">💵 ¥240</span>
+             <span class="m-badge transit">🚇 Hankyu Line ➔ 🚶 เดินเท้า</span>
             </div>
            </div>
           </div>
@@ -1662,11 +1741,22 @@
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            ขึ้นรถบัสเกียวโต (Kyoto City Bus สาย 207) จากป้าย Shijo Kawaramachi ไปลงป้าย Kiyomizu-michi แล้วเดินขึ้นเนินผ่านเจดีย์ยาซากะ (Yasaka Pagoda) เข้าสู่วัดน้ำใส
+            เดินทางจากตลาดนิชิกิไปยังวัดน้ำใส
+            <div class="sub-timeline-box">
+              <div class="sub-route-item selected">
+               <strong>1. Walk:</strong> ตลาดนิชิกิ (Nishiki Market) ➔ ป้ายรถบัส Shijo Kawaramachi / Shijo Karasuma Bus Stop (เดินเท้า ~5-10 นาที)
+              </div>
+              <div class="sub-route-item selected">
+               <strong>2. Kyoto City Bus (สาย 207):</strong> ป้ายรถบัส Shijo Kawaramachi / Shijo Karasuma Bus Stop ➔ ป้ายรถบัส Kiyomizu-michi Bus Stop (15 นาที / 💵 ¥230)
+              </div>
+              <div class="sub-route-item selected">
+               <strong>3. Walk:</strong> ป้ายรถบัส Kiyomizu-michi Bus Stop ➔ วัดน้ำใส (Kiyomizu-dera Temple) (เดินเท้าขึ้นเนิน ~15 นาที)
+              </div>
+             </div>
             <div class="micro-badges">
-             <span class="m-badge time">⏱️ ~2 ชม.</span>
+             <span class="m-badge time">⏱️ ~2 ชม. (รวมเดินเที่ยว)</span>
              <span class="m-badge price">💵 ¥230 (บัส) + ¥400 (วัด)</span>
-             <span class="m-badge transit">🚌 Bus ➔ 🚶 เดินขึ้นเนิน</span>
+             <span class="m-badge transit">🚌 Bus ➔ 🚶 เดินเท้า</span>
             </div>
            </div>
           </div>
@@ -1688,7 +1778,18 @@
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            เดินลงมาจากวัดสู่อ่าวเกียวโต ขึ้นรถไฟสาย Keihan Main Line จากสถานี Kiyomizu-Gojo ไปลงสถานี Yodoyabashi (48 นาที) แล้วขึ้นรถใต้ดิน Midosuji กลับที่พัก Namba
+            เดินลงมาจากวัด มุ่งหน้าสู่แม่น้ำคาโมะและสถานีรถไฟ Keihan เพื่อเดินทางกลับโอซาก้า
+            <div class="sub-timeline-box">
+             <div class="sub-route-item selected">
+              <strong>1. Walk:</strong> วัดน้ำใส (Kiyomizu-dera) ➔ สถานี Kiyomizu-Gojo Station (เดินเท้า ~20 นาที)
+             </div>
+             <div class="sub-route-item selected">
+              <strong>2. Keihan Main Line:</strong> Kiyomizu-Gojo Station ➔ Yodoyabashi Station (48 นาที / 💵 ¥480)
+             </div>
+             <div class="sub-route-item selected">
+              <strong>3. Metro Midosuji Line:</strong> Yodoyabashi Station ➔ Namba Station (หรือ Shinsaibashi Station) (4 นาที / 💵 ¥190)
+             </div>
+            </div>
             <div class="micro-badges">
              <span class="m-badge time">⏱️ ~60 นาที</span>
              <span class="m-badge price">💵 ¥670</span>
@@ -1730,7 +1831,18 @@
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            นั่งรถไฟ Hanshin Namba Line จากสถานี Osaka-Namba ➔ Nishikujo Station (8 นาที / ¥220) จากนั้นเปลี่ยนเป็นสาย JR Yumesaki Line ไปลงสถานี Universal City (6 นาที / ¥160)
+            เดินทางมุ่งหน้าสู่สวนสนุกยูนิเวอร์แซล สตูดิโอส์ เจแปน (USJ)
+            <div class="sub-timeline-box">
+             <div class="sub-route-item selected">
+              <strong>1. Hanshin Namba Line:</strong> Osaka-Namba Station ➔ Nishikujo Station (8 นาที / 💵 ¥220)
+             </div>
+             <div class="sub-route-item selected">
+              <strong>2. JR Yumesaki Line:</strong> Nishikujo Station ➔ Universal City Station (6 นาที / 💵 ¥160)
+             </div>
+             <div class="sub-route-item selected">
+              <strong>3. Walk:</strong> Universal City Station ➔ Universal Studios Japan (เดินเท้า ~3-5 นาที)
+             </div>
+            </div>
             <div class="micro-badges">
              <span class="m-badge time">⏱️ ~30 นาที</span>
              <span class="m-badge price">💵 ¥380</span>
@@ -1782,7 +1894,18 @@
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            นั่ง JR Line จาก Universal City ➔ Nishikujo แล้วต่อ Hanshin Line กลับสถานี Osaka-Namba เดินเท้าสั้นๆ กลับที่พักผ่อนร่างกายหลังเหนื่อยล้ามาทั้งวัน
+            เดินทางกลับจากสวนสนุกย้อนกลับเข้าย่านที่พักนัมบะ
+            <div class="sub-timeline-box">
+             <div class="sub-route-item selected">
+              <strong>1. Walk:</strong> Universal Studios Japan ➔ Universal City Station (เดินเท้า ~3-5 นาที)
+             </div>
+             <div class="sub-route-item selected">
+              <strong>2. JR Yumesaki Line:</strong> Universal City Station ➔ Nishikujo Station (6 นาที / 💵 ¥160)
+             </div>
+             <div class="sub-route-item selected">
+              <strong>3. Hanshin Namba Line:</strong> Nishikujo Station ➔ Osaka-Namba Station (8 นาที / 💵 ¥220)
+             </div>
+            </div>
             <div class="micro-badges">
              <span class="m-badge time">⏱️ ~30 นาที</span>
              <span class="m-badge price">💵 ¥380</span>
@@ -1827,10 +1950,18 @@
             นั่งรถไฟใต้ดินไปยังบริเวณท่าเรือ
             <div class="sub-timeline-box">
              <div class="sub-route-item selected">
-              <strong>เส้นทาง 1:</strong> Sennichimae Line ➔ Chuo Line (เปลี่ยนขบวนสถานี Awaza / 20 นาที / 💵 ¥290)
+              <strong>เส้นทางหลัก (จาก Namba):</strong>
+              <div style="margin-left: 10px; font-size: 0.8rem; margin-top: 4px;">
+               • <strong>Metro Sennichimae Line:</strong> Namba Station ➔ Awaza Station (4 นาที)<br>
+               • <strong>Metro Chuo Line:</strong> Awaza Station ➔ Osakako Station (12 นาที / 💵 รวม ¥290)
+              </div>
              </div>
-             <div class="sub-route-item" style="opacity: 0.7;">
-              <strong>เส้นทาง 2:</strong> Midosuji Line ➔ Chuo Line (เปลี่ยนขบวนสถานี Honmachi / 20 นาที / 💵 ¥290)
+             <div class="sub-route-item" style="opacity: 0.8; margin-top: 6px;">
+              <strong>เส้นทางเลือก (จาก Shinsaibashi):</strong>
+              <div style="margin-left: 10px; font-size: 0.8rem; margin-top: 4px;">
+               • <strong>Metro Midosuji Line:</strong> Shinsaibashi Station ➔ Honmachi Station (2 นาที)<br>
+               • <strong>Metro Chuo Line:</strong> Honmachi Station ➔ Osakako Station (11 นาที / 💵 รวม ¥290)
+              </div>
              </div>
             </div>
             <div class="micro-badges">
@@ -1936,7 +2067,23 @@
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            นั่งรถไฟใต้ดินสายสีเขียว Chuo Line แล้วเปลี่ยนสายขบวนกลับมาลงสถานี Shinsaibashi หรือ Namba
+            นั่งรถไฟใต้ดินย้อนกลับเข้าสู่สถานี Shinsaibashi หรือ Namba
+            <div class="sub-timeline-box">
+             <div class="sub-route-item selected">
+              <strong>เส้นทางหลัก (ไป Namba):</strong>
+              <div style="margin-left: 10px; font-size: 0.8rem; margin-top: 4px;">
+               • <strong>Metro Chuo Line:</strong> Osakako Station ➔ Awaza Station (12 นาที)<br>
+               • <strong>Metro Sennichimae Line:</strong> Awaza Station ➔ Namba Station (4 นาที / 💵 รวม ¥290)
+              </div>
+             </div>
+             <div class="sub-route-item" style="opacity: 0.8; margin-top: 6px;">
+              <strong>เส้นทางเลือก (ไป Shinsaibashi):</strong>
+              <div style="margin-left: 10px; font-size: 0.8rem; margin-top: 4px;">
+               • <strong>Metro Chuo Line:</strong> Osakako Station ➔ Honmachi Station (11 นาที)<br>
+               • <strong>Metro Midosuji Line:</strong> Honmachi Station ➔ Shinsaibashi Station (2 นาที / 💵 รวม ¥290)
+              </div>
+             </div>
+            </div>
             <div class="micro-badges">
              <span class="m-badge time">⏱️ ~20 นาที</span>
              <span class="m-badge price">💵 ¥290</span>
@@ -2004,7 +2151,7 @@
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            ทำการเช็กเอาต์จากห้องพักในโรงแรม และฝากสัมภาระชิ้นใหญ่ทั้งหมดไว้เพื่อความสะดวกในการเดินช้อปปิ้งมื้อสุดท้าย
+            Checkout และฝากสัมภาระชิ้นใหญ่ไว้ที่ล็อบบี้เพื่อความสะดวกในการเดินช้อปปิ้ง
             <div class="micro-badges">
              <span class="m-badge time">⏱️ ~15 นาที</span>
              <span class="m-badge price">💵 ฟรี</span>
@@ -2030,9 +2177,9 @@
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            ทานมื้อเที่ยง เดินเก็บตกช้อปปิ้งและซื้อของกินของฝากย่านการค้าชินไซบาชิและนัมบะให้จุใจก่อนย้ายเมือง
+            ทานมื้อเที่ยง เดินเก็บตกช้อปปิ้งและซื้อของกินของฝาก
             <div class="micro-badges">
-             <span class="m-badge time">⏱️ ~5 ชม.</span>
+             <span class="m-badge time">⏱️ ~2.5 ชม.</span>
              <span class="m-badge price">💵 ตามอัธยาศัย</span>
              <span class="m-badge transit">🚶 เดินเท้า</span>
             </div>
@@ -2046,7 +2193,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">16:30</span>
+          <span class="step-time">14:00</span>
           <div class="step-title-group">
            <h4>สัมภาระ: รับกระเป๋าเดินทาง</h4>
            <p class="subtitle">ลากสัมภาระมุ่งหน้าไปยังสถานีรถไฟ</p>
@@ -2056,7 +2203,7 @@
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            กลับมารับกระเป๋าเดินทางที่ฝากไว้ แล้วเดินลากกระเป๋าไปที่สถานีรถไฟ Nankai Namba
+            กลับมารับกระเป๋าเดินทางที่ฝากไว้ที่ล็อบบี้โรงแรม Welina Hotel แล้วเดินลากกระเป๋าไปที่สถานีรถไฟ Nankai Namba
             <div class="micro-badges">
              <span class="m-badge time">⏱️ ~30 นาที</span>
              <span class="m-badge price">💵 ฟรี</span>
@@ -2072,27 +2219,25 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">17:00</span>
+          <span class="step-time">14:30</span>
           <div class="step-title-group">
            <h4>เดินทาง: Namba ➔ KIX</h4>
-           <p class="subtitle">นั่งรถไฟด่วนพิเศษ Nankai Rapi:t</p>
+           <p class="subtitle">นั่งรถไฟมุ่งตรงสู่สนามบินคันไซเพื่อเช็กอิน</p>
           </div>
           <span class="chevron-icon">▼</span>
          </div>
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            เดินทางไปสนามบินคันไซเพื่อย้ายที่พักสุดท้ายค้างคืนใกล้สนามบิน
+            นั่งรถไฟตรงไปยังสนามบินนานาชาติคันไซ เพื่อเตรียมนำสัมภาระเช็กอินเข้าสู่โรงแรมปลายทาง
             <div class="sub-timeline-box">
              <div class="sub-route-item selected">
               <span class="m-badge main-choice">✅ วิธีที่เลือก</span>
-              <strong>Nankai Rapi:t (Ltd Exp)</strong> (39 นาที / 💵 ¥1,410)<br>
-              <span style="font-size: 0.76rem;">ระบุที่นั่ง เก้าอี้สบาย และมีที่วางสัมภาระที่ปลอดภัย สะดวกมากที่มีกระเป๋าเยอะ</span>
+              <strong>Nankai Rapi:t (Ltd Exp):</strong> Namba Station ➔ Kansai Airport Station (KIX) (39 นาที / 💵 ¥1,410)
              </div>
-             <div class="sub-route-item" style="opacity: 0.7;">
+             <div class="sub-route-item" style="opacity: 0.8;">
               <span class="m-badge option">ทางเลือก</span>
-              <strong>Nankai Airport Express</strong> (49 นาที / 💵 ¥970)<br>
-              <span style="font-size: 0.76rem;">รถไฟปกติ ประหยัดกว่าแต่คนอาจเยอะในช่วงเย็น</span>
+              <strong>Nankai Airport Express:</strong> Namba Station ➔ Kansai Airport Station (KIX) (45 นาที / 💵 ¥970)
              </div>
             </div>
             <div class="micro-badges">
@@ -2110,20 +2255,134 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">18:00</span>
+          <span class="step-time">15:20</span>
           <div class="step-title-group">
            <h4>โรงแรม: Hotel Nikko Kansai Airport</h4>
-           <p class="subtitle">เช็กอินโรงแรมเชื่อมติดสนามบิน</p>
+           <p class="subtitle">เช็กอินและเก็บกระเป๋าเดินทางใบล่าสุด</p>
           </div>
           <span class="chevron-icon">▼</span>
          </div>
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            เดินเชื่อมตรงชานชาลาสถานีรถไฟสนามบินไปยังอาคาร Aero Plaza เพื่อเช็กอินค้างคืนสุดท้ายใกล้สนามบิน รับประทานอาหารค่ำในสนามบินหรือโรงแรมและจัดสัมภาระ
+            เดินเชื่อมตรงชานชาลาสถานีรถไฟสนามบินไปยังอาคาร Aero Plaza เพื่อเช็กอินค้างคืนสุดท้ายและนำกระเป๋าเดินทางสัมภาระทั้งหมดเข้าเก็บในห้องพัก ทำให้เดินทางออกไปเที่ยวต่อได้อย่างคล่องตัวและไร้กังวลเรื่องการลากสัมภาระ
             <div class="micro-badges">
              <span class="m-badge time">⏱️ ~15 นาที (เช็กอิน)</span>
              <span class="m-badge price">💵 ฟรี</span>
+             <span class="m-badge transit">🚶 เดินเท้า</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="timeline-step">
+        <div class="step-marker"></div>
+        <div class="step-card" onclick="toggleStepDetails(this)">
+         <div class="step-card-header">
+          <span class="step-time">16:00</span>
+          <div class="step-title-group">
+           <h4>เดินทาง: KIX ➔ Rinku-Town</h4>
+           <p class="subtitle">เดินทางย้อนกลับ 1 สถานีสู่ย่านชายหาด</p>
+          </div>
+          <span class="chevron-icon">▼</span>
+         </div>
+         <div class="step-details-wrapper">
+          <div class="step-details">
+           <div class="step-details-content">
+            นั่งรถไฟย้อนกลับเพียง 1 สถานีไปยัง Rinku-Town เพื่อพักผ่อนและชมวิวริมทะเล
+            <div class="sub-timeline-box">
+             <div class="sub-route-item selected">
+              <strong>Nankai Line / JR Line:</strong> Kansai Airport Station (KIX) ➔ Rinku-Town Station (6 นาที / 💵 ¥380)
+             </div>
+            </div>
+            <div class="micro-badges">
+             <span class="m-badge time">⏱️ ~6 นาที</span>
+             <span class="m-badge price">💵 ¥380</span>
+             <span class="m-badge transit">🚇 Train</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="timeline-step">
+        <div class="step-marker"></div>
+        <div class="step-card" onclick="toggleStepDetails(this)">
+         <div class="step-card-header">
+          <span class="step-time">16:15</span>
+          <div class="step-title-group">
+           <h4>สถานที่: Rinku Park &amp; Marble Beach</h4>
+           <p class="subtitle">เดินเล่นชายหาดชมพระอาทิตย์ตกดินริมอ่าว</p>
+          </div>
+          <span class="chevron-icon">▼</span>
+         </div>
+         <div class="step-details-wrapper">
+          <div class="step-details">
+           <div class="step-details-content">
+            เดินเที่ยวชมสวนสาธารณะ Rinku Park และชายหาดหินกรวดสีขาว Marble Beach ชมวิวพระอาทิตย์ตกดิน
+            <div class="micro-badges">
+             <span class="m-badge time">⏱️ ~1.5 ชม.</span>
+             <span class="m-badge price">💵 ฟรี</span>
+             <span class="m-badge transit">🚶 เดินเท้า</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="timeline-step">
+        <div class="step-marker"></div>
+        <div class="step-card" onclick="toggleStepDetails(this)">
+         <div class="step-card-header">
+          <span class="step-time">18:00</span>
+          <div class="step-title-group">
+           <h4>เดินทาง: Rinku-Town ➔ KIX</h4>
+           <p class="subtitle">เดินทางกลับสู่สนามบินคันไซ</p>
+          </div>
+          <span class="chevron-icon">▼</span>
+         </div>
+         <div class="step-details-wrapper">
+          <div class="step-details">
+           <div class="step-details-content">
+            เดินทางกลับโดยรถไฟจากสถานี Rinku-Town กลับสู่สนามบินคันไซเพื่อรับประทานอาหารเย็น
+            <div class="sub-timeline-box">
+             <div class="sub-route-item selected">
+              <strong>Nankai Line / JR Line:</strong> Rinku-Town Station ➔ Kansai Airport Station (KIX) (6 นาที / 💵 ¥380)
+             </div>
+            </div>
+            <div class="micro-badges">
+             <span class="m-badge time">⏱️ ~6 นาที</span>
+             <span class="m-badge price">💵 ¥380</span>
+             <span class="m-badge transit">🚇 Train</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="timeline-step">
+        <div class="step-marker"></div>
+        <div class="step-card" onclick="toggleStepDetails(this)">
+         <div class="step-card-header">
+          <span class="step-time">18:20</span>
+          <div class="step-title-group">
+           <h4>มื้อค่ำ: สนามบินคันไซ (KIX)</h4>
+           <p class="subtitle">ทานอาหารค่ำส่งท้ายทริปก่อนเข้าห้องพัก</p>
+          </div>
+          <span class="chevron-icon">▼</span>
+         </div>
+         <div class="step-details-wrapper">
+          <div class="step-details">
+           <div class="step-details-content">
+            ทานอาหารมื้อค่ำที่ร้านอาหารภายในตึก Aero Plaza หรือในอาคารผู้โดยสารหลัก Terminal 1 ตามอัธยาศัย ก่อนเดินกลับเข้าพักผ่อนในโรงแรม Nikko และแพ็คกระเป๋าเดินทางขากลับ
+            <div class="micro-badges">
+             <span class="m-badge time">⏱️ ~1.5 ชม.</span>
+             <span class="m-badge price">💵 ตามอัธยาศัย</span>
              <span class="m-badge transit">🚶 เดินเท้า</span>
             </div>
            </div>
@@ -2136,7 +2395,7 @@
 
       <div class="daily-cost-card">
        <span>💰</span>
-       <span>ค่าเดินทางวันนี้: ~¥1,410 / คน</span>
+       <span>ค่าเดินทางวันนี้: ~¥2,170 / คน</span>
       </div>
      </div>
 
