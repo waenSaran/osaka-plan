@@ -1,0 +1,3706 @@
+<!DOCTYPE html>
+<html lang="th">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Osaka Trip Plan | 7 - 12 Nov 2026
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&amp;family=Noto+Sans+Thai:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   :root {
+        --bg: #f8f5d6;
+        --bg-soft: #f4f1ca;
+        --hero: #eed3cd;
+        --card: #dbe0b7;
+        --card-deep: #a8b28b;
+        --card-soft: rgba(255, 251, 226, 0.94);
+        --accent: #f3d9d2;
+        --ink: #4d2b18;
+        --muted: #66584b;
+        --line: rgba(77, 43, 24, 0.12);
+        --shadow: 0 18px 40px rgba(103, 89, 58, 0.12);
+        --radius-xl: 32px;
+        --radius-lg: 24px;
+        --radius-md: 18px;
+        --radius-sm: 999px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Noto Sans Thai", sans-serif;
+        font-size: 16px;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.55), transparent 30%),
+          linear-gradient(180deg, #faf7dd 0%, var(--bg) 40%, #f6f2cf 100%);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(95, 80, 51, 0.06) 0.7px, transparent 0.7px);
+        background-size: 16px 16px;
+        opacity: 0.35;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        width: min(1120px, calc(100% - 28px));
+        margin: 0 auto;
+        padding: 20px 0 56px;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, #f0d5ce 0%, #efd9d3 55%, #f4e2da 100%);
+        border-radius: 38px;
+        padding: 28px 22px 24px;
+        box-shadow: var(--shadow);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: -40px;
+        top: -40px;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.28);
+      }
+
+      .hero-top {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 14px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-emoji {
+        width: 72px;
+        height: 72px;
+        border-radius: 22px;
+        display: grid;
+        place-items: center;
+        background: rgba(255, 255, 255, 0.42);
+        font-size: 40px;
+        box-shadow: inset 0 0 0 1px rgba(77, 43, 24, 0.08);
+      }
+
+      .hero-title h1 {
+        margin: 0;
+        font-family: "Kanit", sans-serif;
+        font-size: clamp(2.15rem, 5vw, 4.6rem);
+        line-height: 0.95;
+        letter-spacing: 0.02em;
+      }
+
+      .hero-title p {
+        margin: 4px 0 0;
+        font-size: clamp(1.05rem, 2.6vw, 1.8rem);
+        color: var(--ink);
+      }
+
+      .flag {
+        width: 74px;
+        height: 52px;
+        background:
+          radial-gradient(circle at center, #bd1731 0 24%, transparent 25%),
+          linear-gradient(180deg, rgba(255,255,255,0.98), rgba(242,242,242,0.98));
+        border-radius: 18px;
+        box-shadow:
+          inset 0 0 0 1px rgba(77, 43, 24, 0.08),
+          0 10px 20px rgba(77, 43, 24, 0.08);
+      }
+
+      .hero-intro {
+        position: relative;
+        z-index: 1;
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1.3fr 0.9fr;
+        gap: 16px;
+      }
+
+      .intro-card,
+      .mini-card,
+      .section,
+      .day-card,
+      .hotel-card,
+      .fare-card,
+      .cheat-card {
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow);
+      }
+
+      .intro-card {
+        padding: 18px 18px 16px;
+        background: rgba(255, 251, 232, 0.78);
+        backdrop-filter: blur(10px);
+      }
+
+      .intro-card p {
+        margin: 0;
+        line-height: 1.7;
+        font-size: 1rem;
+        color: var(--muted);
+      }
+
+      .mini-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .mini-card {
+        background: rgba(255, 255, 255, 0.62);
+        padding: 14px 16px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(77, 43, 24, 0.72);
+      }
+
+      .mini-card strong {
+        display: block;
+        margin-top: 6px;
+        font-size: 1rem;
+      }
+
+      .jump-nav {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding: 16px 2px 6px;
+        scrollbar-width: none;
+      }
+
+      .jump-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .jump-nav a {
+        flex: 0 0 auto;
+        text-decoration: none;
+        padding: 10px 16px;
+        border-radius: var(--radius-sm);
+        background: rgba(168, 178, 139, 0.22);
+        border: 1px solid rgba(77, 43, 24, 0.08);
+        font-weight: 600;
+      }
+
+      .layout {
+        display: grid;
+        gap: 18px;
+        margin-top: 20px;
+      }
+
+      .section {
+        background: linear-gradient(180deg, rgba(221, 226, 183, 0.85), rgba(214, 220, 175, 0.96));
+        padding: 20px;
+      }
+
+      .section.deep {
+        background: linear-gradient(180deg, rgba(169, 179, 140, 0.98), rgba(160, 170, 132, 0.98));
+        color: #231a0f;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .section-title h2 {
+        margin: 0;
+        font-family: "Kanit", sans-serif;
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        line-height: 1;
+      }
+
+      .section-title p {
+        margin: 0;
+        color: rgba(35, 26, 15, 0.74);
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: var(--radius-sm);
+        background: rgba(255, 249, 229, 0.7);
+        border: 1px solid rgba(77, 43, 24, 0.08);
+        font-size: 0.92rem;
+        font-weight: 600;
+      }
+
+      .grid-2,
+      .grid-3 {
+        display: grid;
+        gap: 14px;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .flight-card,
+      .hotel-card,
+      .day-card,
+      .fare-card,
+      .cheat-card {
+        background: var(--card-soft);
+        padding: 18px;
+        border: 1px solid rgba(77, 43, 24, 0.08);
+      }
+
+      .flight-card h3,
+      .hotel-card h3,
+      .day-card h3,
+      .fare-card h3,
+      .cheat-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.18rem;
+      }
+
+      .subline {
+        color: var(--muted);
+        margin: -4px 0 12px;
+        font-size: 0.95rem;
+      }
+
+      .meta-list,
+      .notes-list,
+      .transport-list,
+      .compact-list,
+      .day-list {
+        margin: 0;
+        padding-left: 1.15rem;
+      }
+
+      .meta-list li,
+      .notes-list li,
+      .transport-list li,
+      .compact-list li,
+      .day-list li {
+        margin: 0 0 8px;
+        line-height: 1.65;
+        font-size: 0.98rem;
+      }
+
+      .label {
+        font-weight: 700;
+      }
+
+      .transport-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 14px;
+      }
+
+      .transport-box {
+        background: rgba(255, 251, 228, 0.94);
+        border-radius: 22px;
+        padding: 16px;
+        border: 1px solid rgba(77, 43, 24, 0.08);
+      }
+
+      .transport-box h4,
+      .day-block h4 {
+        margin: 0 0 8px;
+        font-size: 1.04rem;
+      }
+
+      .price-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 10px;
+        padding: 7px 11px;
+        border-radius: var(--radius-sm);
+        background: rgba(243, 217, 210, 0.7);
+        font-weight: 700;
+      }
+
+      .days-grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .day-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .day-card::after {
+        content: "";
+        position: absolute;
+        top: -70px;
+        right: -50px;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: rgba(168, 178, 139, 0.12);
+      }
+
+      .day-head {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .day-head h3 {
+        margin: 0;
+        font-family: "Kanit", sans-serif;
+        font-size: 1.6rem;
+      }
+
+      .day-date {
+        color: var(--muted);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .day-theme {
+        margin: 0 0 14px;
+        font-size: 1.02rem;
+        font-weight: 700;
+      }
+
+      .day-blocks {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 12px;
+      }
+
+      .day-block {
+        background: rgba(255, 252, 235, 0.8);
+        border: 1px solid rgba(77, 43, 24, 0.08);
+        border-radius: 20px;
+        padding: 15px 16px;
+      }
+
+      .day-block p {
+        margin: 0;
+        line-height: 1.7;
+        font-size: 0.99rem;
+        color: var(--muted);
+      }
+
+      .day-list {
+        color: var(--muted);
+      }
+
+      .fact-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .fact {
+        display: inline-flex;
+        align-items: center;
+        padding: 7px 10px;
+        border-radius: var(--radius-sm);
+        background: rgba(255, 245, 220, 0.95);
+        border: 1px solid rgba(77, 43, 24, 0.08);
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .fare-card strong,
+      .cheat-card strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .notes {
+        background: linear-gradient(180deg, rgba(238, 211, 205, 0.82), rgba(248, 239, 215, 0.95));
+      }
+
+      .footer-note {
+        margin-top: 18px;
+        text-align: center;
+        color: rgba(77, 43, 24, 0.7);
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 860px) {
+        .hero-top,
+        .hero-intro,
+        .grid-2,
+        .grid-3,
+        .transport-boxes {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-top {
+          justify-items: start;
+        }
+
+        .flag {
+          width: 62px;
+          height: 44px;
+        }
+
+        .section-title {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          width: min(100% - 18px, 1120px);
+          padding-top: 10px;
+          padding-bottom: 30px;
+        }
+
+        body {
+          font-size: 16.5px;
+        }
+
+        .hero {
+          border-radius: 28px;
+          padding: 20px 16px 18px;
+        }
+
+        .hero-emoji {
+          width: 58px;
+          height: 58px;
+          border-radius: 18px;
+          font-size: 30px;
+        }
+
+        .mini-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section,
+        .flight-card,
+        .hotel-card,
+        .day-card,
+        .fare-card,
+        .cheat-card,
+        .transport-box {
+          border-radius: 22px;
+        }
+
+        .section {
+          padding: 16px;
+        }
+
+        .flight-card,
+        .hotel-card,
+        .day-card,
+        .fare-card,
+        .cheat-card {
+          padding: 16px;
+        }
+
+        .jump-nav a {
+          font-size: 0.96rem;
+        }
+
+        .meta-list li,
+        .notes-list li,
+        .transport-list li,
+        .compact-list li,
+        .day-list li,
+        .day-block p {
+          font-size: 1rem;
+        }
+
+        .day-head {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 8px;
+      }
+
+      .tl-item {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        gap: 14px;
+        align-items: start;
+      }
+
+      .tl-time {
+        font-family: "Kanit", sans-serif;
+        font-weight: 700;
+        color: #8a4f35;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 4px 0;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        text-align: center;
+        border: 1px solid rgba(77, 43, 24, 0.15);
+        box-shadow: 0 2px 4px rgba(77, 43, 24, 0.05);
+      }
+      
+      .tl-time:empty {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        position: relative;
+      }
+      
+      .tl-time:empty::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(138, 79, 53, 0.3);
+      }
+
+      .tl-location {
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 2px;
+        font-size: 1rem;
+      }
+
+      .tl-desc {
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+  
+      .day-cost-summary {
+        margin-top: 14px;
+        padding: 10px 14px;
+        border-radius: var(--radius-md);
+        background: rgba(168, 178, 139, 0.18);
+        border: 1px solid rgba(77, 43, 24, 0.08);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .transit-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+        background: var(--card-soft);
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(77, 43, 24, 0.08);
+        box-shadow: var(--shadow);
+      }
+
+      .transit-table th,
+      .transit-table td {
+        padding: 12px 14px;
+        text-align: left;
+        border-bottom: 1px solid rgba(77, 43, 24, 0.08);
+        font-size: 0.95rem;
+      }
+
+      .transit-table th {
+        background: rgba(168, 178, 139, 0.25);
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .transit-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .transit-table tr.total-row {
+        background: rgba(168, 178, 139, 0.15);
+        font-weight: 700;
+      }
+
+      @media (max-width: 640px) {
+        .transit-table th,
+        .transit-table td {
+          padding: 8px 10px;
+          font-size: 0.88rem;
+        }
+      }
+  
+      .tl-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+
+      .meta-tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 10px;
+        border-radius: 8px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        border: 1px solid rgba(77, 43, 24, 0.08);
+      }
+
+      .meta-tag.duration {
+        background: rgba(255, 255, 255, 0.7);
+        color: var(--ink);
+      }
+
+      .meta-tag.price {
+        background: rgba(243, 217, 210, 0.6);
+        color: #bd1731;
+        border-color: rgba(189, 23, 49, 0.15);
+      }
+
+      .meta-tag.transit {
+        background: rgba(168, 178, 139, 0.25);
+        color: #3d5828;
+        border-color: rgba(168, 178, 139, 0.4);
+      }
+  
+      .sub-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+        background: rgba(255, 255, 255, 0.45);
+        padding: 12px;
+        border-radius: 14px;
+        border: 1px dashed rgba(77, 43, 24, 0.15);
+      }
+
+      .sub-step {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+
+      .sub-step.chosen {
+        background: linear-gradient(90deg, rgba(61, 88, 40, 0.1) 0%, rgba(61, 88, 40, 0.03) 100%);
+        border: 1px solid rgba(61, 88, 40, 0.22);
+        border-left: 5px solid #3d5828;
+        padding: 10px 14px 10px 10px;
+        border-radius: 4px 12px 12px 4px;
+        box-shadow: 0 4px 12px rgba(61, 88, 40, 0.08);
+      }
+
+      .micro-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 2px 6px;
+        border-radius: 6px;
+        font-size: 0.74rem;
+        font-weight: 700;
+        border: 1px solid rgba(77, 43, 24, 0.08);
+      }
+
+      .micro-badge.transit {
+        background: rgba(168, 178, 139, 0.25);
+        color: #3d5828;
+        border-color: rgba(168, 178, 139, 0.35);
+      }
+
+      .micro-badge.time {
+        background: rgba(255, 255, 255, 0.85);
+        color: var(--ink);
+      }
+
+      .micro-badge.price {
+        background: rgba(243, 217, 210, 0.65);
+        color: #bd1731;
+        border-color: rgba(189, 23, 49, 0.12);
+      }
+
+      .sub-step-label {
+        font-weight: 500;
+        color: var(--muted);
+      }
+  
+      .micro-badge.option {
+        background: rgba(0, 82, 155, 0.12);
+        color: #00529b;
+        border-color: rgba(0, 82, 155, 0.22);
+      }
+
+      .micro-badge.chosen-tag {
+        background: #3d5828;
+        color: #ffffff;
+        border-color: #3d5828;
+        box-shadow: 0 2px 5px rgba(61, 88, 40, 0.3);
+        padding: 3px 10px;
+        border-radius: 999px; /* pill shape for clear difference */
+        font-weight: 700;
+      }
+      
+      .option-divider {
+        align-self: center;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: rgba(77, 43, 24, 0.4);
+        margin: 4px 0;
+        letter-spacing: 0.1em;
+        text-align: center;
+        width: 100%;
+        position: relative;
+      }
+      
+      .option-divider::before,
+      .option-divider::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 40%;
+        height: 1px;
+        background: rgba(77, 43, 24, 0.12);
+      }
+      
+      .option-divider::before { left: 0; }
+      .option-divider::after { right: 0; }
+
+      /* Canva-style top sections - Refined & Beautified */
+      .hero-canva {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(135deg, #f0d5ce 0%, #efd9d3 55%, #f4e2da 100%);
+        border-radius: var(--radius-xl);
+        padding: 20px 24px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(77, 43, 24, 0.08);
+        box-shadow: var(--shadow);
+      }
+      .hero-castle {
+        font-size: 2.8rem;
+      }
+      .hero-title-box {
+        text-align: center;
+        flex: 1;
+      }
+      .hero-title-box h1 {
+        margin: 0;
+        font-family: "Kanit", sans-serif;
+        font-size: clamp(1.8rem, 4.2vw, 3.2rem);
+        color: #4d2b18;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+      .hero-title-box p {
+        margin: 4px 0 0;
+        font-size: clamp(1rem, 2vw, 1.4rem);
+        color: var(--muted);
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+      .section-canva {
+        border-radius: var(--radius-xl);
+        padding: 24px 20px;
+        margin-bottom: 20px;
+        box-shadow: var(--shadow);
+        color: var(--ink);
+        border: 1px solid rgba(77, 43, 24, 0.08);
+      }
+      .section-canva.flight-sec {
+        background: linear-gradient(180deg, rgba(228, 234, 208, 0.9), rgba(221, 226, 183, 0.96));
+      }
+      .section-canva.transit-sec-1 {
+        background: linear-gradient(180deg, rgba(169, 179, 140, 0.98), rgba(159, 177, 151, 0.98));
+      }
+      .section-canva.transit-sec-2 {
+        background: linear-gradient(180deg, rgba(245, 238, 215, 0.92), rgba(240, 232, 204, 0.98));
+      }
+      .section-canva.hotel-sec {
+        background: linear-gradient(180deg, rgba(169, 179, 140, 0.98), rgba(159, 177, 151, 0.98));
+      }
+      .sec-header.centered {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 18px;
+      }
+      .sec-header-icon {
+        font-size: 2.2rem;
+        margin-bottom: 6px;
+        filter: drop-shadow(0 2px 4px rgba(77, 43, 24, 0.08));
+      }
+      .sec-header.centered h2 {
+        margin: 0;
+        font-family: "Kanit", sans-serif;
+        font-size: clamp(1.4rem, 3vw, 1.8rem);
+        font-weight: 700;
+        color: var(--ink);
+        letter-spacing: 0.02em;
+      }
+      .sec-header-sub {
+        font-size: 0.92rem;
+        margin-top: 4px;
+        font-weight: 600;
+        color: var(--muted);
+        opacity: 0.9;
+      }
+      .pink-alert-badge {
+        background: rgba(243, 217, 210, 0.85);
+        color: #bd1731;
+        padding: 12px 16px;
+        border-radius: 16px;
+        font-size: 0.92rem;
+        line-height: 1.55;
+        margin-bottom: 18px;
+        font-weight: 600;
+        border: 1px solid rgba(189, 23, 49, 0.18);
+        box-shadow: 0 4px 10px rgba(189, 23, 49, 0.04);
+      }
+      .canva-card {
+        background: var(--card-soft);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 20px;
+        border: 1px solid rgba(77, 43, 24, 0.08);
+        box-shadow: 0 6px 16px rgba(103, 89, 58, 0.05);
+      }
+      .canva-card h3.card-title {
+        margin: 0 0 14px;
+        font-size: 1.15rem;
+        font-weight: 700;
+        font-family: "Kanit", sans-serif;
+        color: #8a4f35;
+        border-bottom: 2px solid rgba(138, 79, 53, 0.15);
+        padding-bottom: 6px;
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+      }
+      .canva-card h4.underline {
+        border-bottom: 2px solid rgba(138, 79, 53, 0.15);
+        padding-bottom: 6px;
+        text-decoration: none;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .underline {
+        text-decoration: underline;
+      }
+      .canva-list {
+        margin: 0;
+        padding-left: 0;
+        list-style-type: none;
+      }
+      .canva-list > li {
+        position: relative;
+        padding-left: 18px;
+        margin-bottom: 10px;
+        line-height: 1.65;
+        font-size: 0.96rem;
+      }
+      .canva-list > li::before {
+        content: "•";
+        position: absolute;
+        left: 2px;
+        color: #8a4f35;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+      .canva-list ul {
+        margin: 8px 0 4px;
+        padding-left: 0;
+        list-style-type: none;
+      }
+      .canva-list ul li {
+        position: relative;
+        padding-left: 16px;
+        margin-bottom: 6px;
+        font-size: 0.92rem;
+        color: var(--muted);
+      }
+      .canva-list ul li::before {
+        content: "◦";
+        position: absolute;
+        left: 2px;
+        color: rgba(138, 79, 53, 0.5);
+        font-weight: bold;
+        font-size: 1rem;
+      }
+      .canva-list .label {
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      /* Boarding Pass Styles */
+      .ticket-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 14px;
+      }
+      .flight-ticket {
+        display: flex;
+        background: var(--card-soft);
+        border: 1px solid rgba(77, 43, 24, 0.12);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(103, 89, 58, 0.05);
+        position: relative;
+        color: var(--ink);
+      }
+      /* Perforation circle punches */
+      .flight-ticket::before,
+      .flight-ticket::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #f8f5d6; /* matches page background to look like a punch */
+        border-radius: 50%;
+        left: 72%; /* aligned with the dashed divider */
+        z-index: 2;
+        border: 1px solid rgba(77, 43, 24, 0.12);
+      }
+      .flight-ticket::before {
+        top: -10px;
+      }
+      .flight-ticket::after {
+        bottom: -10px;
+      }
+      
+      .ticket-main {
+        flex: 1.8;
+        padding: 16px 20px;
+        border-right: 1.5px dashed rgba(77, 43, 24, 0.15);
+      }
+      .ticket-stub {
+        flex: 0.7;
+        padding: 16px 14px;
+        background: rgba(138, 79, 53, 0.04);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .ticket-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        border-bottom: 1px solid rgba(77, 43, 24, 0.08);
+        padding-bottom: 6px;
+      }
+      .ticket-airline {
+        font-family: "Kanit", sans-serif;
+        font-weight: 700;
+        color: #bd1731;
+        font-size: 0.95rem;
+      }
+      .ticket-flight-no {
+        font-family: "Kanit", sans-serif;
+        font-weight: 600;
+        color: var(--ink);
+        font-size: 0.9rem;
+      }
+      
+      .ticket-route {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+      }
+      .route-airport {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+      .route-airport .code {
+        font-family: "Kanit", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: var(--ink);
+        line-height: 1;
+      }
+      .route-airport .city {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--muted);
+        letter-spacing: 0.05em;
+      }
+      .route-airport .terminal {
+        font-size: 0.7rem;
+        color: #8a4f35;
+        font-weight: 700;
+      }
+      .route-path {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin: 0 10px;
+        min-width: 0;
+      }
+      .route-path .duration {
+        font-size: 0.72rem;
+        color: var(--muted);
+        font-weight: 600;
+        margin-bottom: 4px;
+        white-space: nowrap;
+      }
+      .plane-line {
+        width: 100%;
+        height: 2px;
+        background: rgba(77, 43, 24, 0.15);
+        position: relative;
+      }
+      .plane-line::after {
+        content: "✈️";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        font-size: 0.74rem;
+        background: var(--card-soft);
+        padding: 0 4px;
+      }
+      
+      .ticket-details {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 8px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(77, 43, 24, 0.05);
+      }
+      .detail-item {
+        display: flex;
+        flex-direction: column;
+      }
+      .detail-label {
+        font-size: 0.62rem;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .detail-val {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      
+      .stub-header {
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: var(--muted);
+        border-bottom: 1px solid rgba(77, 43, 24, 0.08);
+        width: 100%;
+        text-align: center;
+        padding-bottom: 4px;
+      }
+      .stub-route {
+        font-family: "Kanit", sans-serif;
+        font-weight: 700;
+        color: var(--ink);
+        font-size: 0.95rem;
+        margin: 6px 0;
+      }
+      .stub-details {
+        font-size: 0.68rem;
+        color: var(--muted);
+        width: 100%;
+        text-align: left;
+        line-height: 1.4;
+      }
+      .barcode {
+        width: 100%;
+        height: 24px;
+        background: repeating-linear-gradient(
+          90deg,
+          var(--ink),
+          var(--ink) 1px,
+          transparent 1px,
+          transparent 3px,
+          var(--ink) 3px,
+          var(--ink) 5px,
+          transparent 5px,
+          transparent 6px
+        );
+        margin-top: 8px;
+        opacity: 0.7;
+      }
+
+      /* Boarding pass responsive layout */
+      @media (max-width: 580px) {
+        .flight-ticket {
+          flex-direction: column;
+        }
+        .flight-ticket::before,
+        .flight-ticket::after {
+          display: none;
+        }
+        .ticket-main {
+          border-right: none;
+          border-bottom: 1.5px dashed rgba(77, 43, 24, 0.15);
+        }
+        .ticket-stub {
+          flex-direction: row;
+          padding: 12px 20px;
+          gap: 10px;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .stub-header {
+          width: auto;
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+        .stub-route {
+          margin: 0;
+        }
+        .stub-details {
+          width: auto;
+          display: flex;
+          gap: 10px;
+        }
+        .barcode {
+          display: none;
+        }
+      }
+
+      /* Hotel Section Transit Labels */
+      .hotel-sec .tl-item {
+        grid-template-columns: 85px 1fr;
+      }
+      .hotel-sec .tl-label {
+        font-family: "Kanit", sans-serif;
+        font-weight: 700;
+        color: #4d2b18;
+        background: rgba(77, 43, 24, 0.06);
+        border: 1px solid rgba(77, 43, 24, 0.12);
+        padding: 4px 6px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        text-align: center;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      @media (max-width: 580px) {
+        .hotel-sec .tl-item {
+          grid-template-columns: 1fr;
+          gap: 6px;
+        }
+        .hotel-sec .tl-label {
+          width: auto;
+          display: inline-block;
+          text-align: left;
+          padding: 4px 10px;
+        }
+      }
+  </style>
+ </head>
+ <body>
+  <main class="page">
+    <header class="hero-canva">
+     <div aria-hidden="true" class="hero-castle">
+      🏯
+     </div>
+     <div class="hero-title-box">
+      <h1>
+       OSAKA TRIP PLAN
+      </h1>
+      <p>
+       7 - 12 NOV 2026
+      </p>
+     </div>
+     <div aria-hidden="true" class="flag">
+     </div>
+    </header>
+    <nav aria-label="Day navigation" class="jump-nav">
+     <a href="#overview">
+      Overview
+     </a>
+     <a href="#day1">
+      Day 1
+     </a>
+     <a href="#day2">
+      Day 2
+     </a>
+     <a href="#day3">
+      Day 3
+     </a>
+     <a href="#day4">
+      Day 4
+     </a>
+     <a href="#day5">
+      Day 5
+     </a>
+     <a href="#day6">
+      Day 6
+     </a>
+     <a href="#fares">
+      Fares
+     </a>
+     <a href="#katsuoji-bus">
+      Katsuoji Bus
+     </a>
+     <a href="#cheat-sheet">
+      Transit
+     </a>
+    </nav>
+    <div class="layout" id="overview">
+     <section class="section-canva flight-sec">
+      <div class="section-title">
+        <div>
+         <h2>รายละเอียดเที่ยวบิน</h2>
+         <p>รายละเอียดขาไปและขากลับแบบบอร์ดดิ้งพาส</p>
+        </div>
+        <span class="pill">✈️ Thai AirAsia X</span>
+       </div>
+      <div class="ticket-container">
+       
+       <!-- Ticket 1: DMK ➔ KIX -->
+       <div class="flight-ticket">
+        <div class="ticket-main">
+         <div class="ticket-header">
+          <span class="ticket-airline">Thai AirAsia X</span>
+          <span class="ticket-flight-no">✈️ XJ612</span>
+         </div>
+         <div class="ticket-route">
+          <div class="route-airport">
+           <span class="code">DMK</span>
+           <span class="city">BANGKOK</span>
+           <span class="terminal">Terminal 1</span>
+          </div>
+          <div class="route-path" aria-label="Flight duration: 5 hours 45 minutes">
+           <span class="duration">⏱️ 5 ชม. 45 นาที</span>
+           <div class="plane-line"></div>
+          </div>
+          <div class="route-airport text-right">
+           <span class="code">KIX</span>
+           <span class="city">OSAKA</span>
+           <span class="terminal">Terminal 1</span>
+          </div>
+         </div>
+         <div class="ticket-details">
+          <div class="detail-item">
+           <span class="detail-label">DATE / วันเดินทาง</span>
+           <span class="detail-val">เสาร์ 7 Nov 2026</span>
+          </div>
+          <div class="detail-item">
+           <span class="detail-label">DEP TIME / ออก</span>
+           <span class="detail-val">00:55 น.</span>
+          </div>
+          <div class="detail-item">
+           <span class="detail-label">ARR TIME / ถึง</span>
+           <span class="detail-val">08:40 น.</span>
+          </div>
+         </div>
+        </div>
+        <div class="ticket-stub">
+         <div class="stub-header">BOARDING PASS</div>
+         <div class="stub-route">DMK ➔ KIX</div>
+         <div class="stub-details">
+          <div>FLIGHT: <strong>XJ612</strong></div>
+          <div>DATE: <strong>7 Nov</strong></div>
+          <div>DEP: <strong>00:55</strong></div>
+         </div>
+         <div class="barcode" aria-hidden="true"></div>
+        </div>
+       </div>
+
+       <!-- Ticket 2: KIX ➔ DMK -->
+       <div class="flight-ticket">
+        <div class="ticket-main">
+         <div class="ticket-header">
+          <span class="ticket-airline">Thai AirAsia X</span>
+          <span class="ticket-flight-no">✈️ XJ613</span>
+         </div>
+         <div class="ticket-route">
+          <div class="route-airport">
+           <span class="code">KIX</span>
+           <span class="city">OSAKA</span>
+           <span class="terminal">Terminal 1</span>
+          </div>
+          <div class="route-path" aria-label="Flight duration: 6 hours 30 minutes">
+           <span class="duration">⏱️ 6 ชม. 30 นาที</span>
+           <div class="plane-line"></div>
+          </div>
+          <div class="route-airport text-right">
+           <span class="code">DMK</span>
+           <span class="city">BANGKOK</span>
+           <span class="terminal">Terminal 1</span>
+          </div>
+         </div>
+         <div class="ticket-details">
+          <div class="detail-item">
+           <span class="detail-label">DATE / วันเดินทาง</span>
+           <span class="detail-val">พฤหัส 12 Nov 2026</span>
+          </div>
+          <div class="detail-item">
+           <span class="detail-label">DEP TIME / ออก</span>
+           <span class="detail-val">09:55 น.</span>
+          </div>
+          <div class="detail-item">
+           <span class="detail-label">ARR TIME / ถึง</span>
+           <span class="detail-val">14:25 น.</span>
+          </div>
+         </div>
+        </div>
+        <div class="ticket-stub">
+         <div class="stub-header">BOARDING PASS</div>
+         <div class="stub-route">KIX ➔ DMK</div>
+         <div class="stub-details">
+          <div>FLIGHT: <strong>XJ613</strong></div>
+          <div>DATE: <strong>12 Nov</strong></div>
+          <div>DEP: <strong>09:55</strong></div>
+         </div>
+         <div class="barcode" aria-hidden="true"></div>
+        </div>
+       </div>
+
+      </div>
+     </section>
+     <section class="section-canva transit-sec-1">
+      <div class="section-title">
+        <div>
+         <h2>คู่มือการเดินทางขาไป</h2>
+         <p>KANSAI AIRPORT ➔ Welina Hotel Premier Shinsaibashi HOTEL</p>
+        </div>
+        <span class="pill">✈️ ➔ 🏨 KIX to Hotel</span>
+       </div>
+      <div class="pink-alert-badge">
+       • หลังผ่าน ตม. และรับกระเป๋าแล้ว เดินตามป้าย Railways / Train ขึ้นไปชั้น 2 ของอาคารสนามบิน จะเจอสถานีรถไฟ Kansai-Airport Station
+      </div>
+      <div class="grid-2">
+       <article class="canva-card">
+        <h3 class="card-title text-center">
+         OPTION 1: รถไฟด่วน Rapi:t
+        </h3>
+        <div class="timeline">
+         <div class="tl-item">
+          <div class="tl-time">Step 1</div>
+          <div class="tl-content">
+           <div class="tl-location">ขึ้นรถไฟด่วน Nankai "Rapi:t"</div>
+           <div class="tl-desc">
+            นั่งจากสถานี Kansai-Airport ➔ สถานี Namba
+            <div class="tl-meta" style="margin-top: 6px;">
+             <span class="micro-badge transit">🚇 Nankai Rapi:t</span>
+             <span class="micro-badge time">⏱️ 40 นาที</span>
+             <span class="micro-badge price">💵 ¥1,670 (~341.91 บาท)</span>
+            </div>
+            <p style="margin: 6px 0 0; font-size: 0.88rem; line-height: 1.45;">
+             * <strong>ต้องจองที่นั่งล่วงหน้า</strong> (ทุกที่นั่งเป็น Reserved Seat)<br>
+             * <strong>เร็ว เก้าอี้สบาย มีที่วางกระเป๋าเดินทางขนาดใหญ่</strong> เหมาะสำหรับผู้ที่มีสัมภาระเยอะ
+            </p>
+           </div>
+          </div>
+         </div>
+         <div class="tl-item">
+          <div class="tl-time">Step 2</div>
+          <div class="tl-content">
+           <div class="tl-location">เดินเท้าไปยังโรงแรม</div>
+           <div class="tl-desc">
+            เดินจากสถานี Namba ➔ โรงแรม Welina Hotel
+            <div class="tl-meta" style="margin-top: 6px;">
+             <span class="micro-badge time">⏱️ เดิน ~7 นาที</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </article>
+       <article class="canva-card">
+        <h3 class="card-title text-center">
+         OPTION 2: รถไฟธรรมดา Airport Express
+        </h3>
+        <div class="timeline">
+         <div class="tl-item">
+          <div class="tl-time">Step 1</div>
+          <div class="tl-content">
+           <div class="tl-location">ขึ้นรถไฟ Nankai Airport Express</div>
+           <div class="tl-desc">
+            นั่งจากสถานี Kansai-Airport ➔ สถานี Namba
+            <div class="tl-meta" style="margin-top: 6px;">
+             <span class="micro-badge transit">🚇 Airport Express</span>
+             <span class="micro-badge time">⏱️ 50 นาที</span>
+             <span class="micro-badge price">💵 ¥970 (~198.59 บาท)</span>
+            </div>
+            <p style="margin: 6px 0 0; font-size: 0.88rem; line-height: 1.45;">
+             * <strong>ไม่ต้องจองที่นั่ง</strong> (วิ่งบริการแบบ Commuter Train เหมือนรถไฟฟ้าทั่วไป)<br>
+             * อาจจะคนแน่นในช่วงชั่วโมงเร่งด่วน ไม่มีชั้นวางกระเป๋าเดินทางแยกเฉพาะ
+            </p>
+           </div>
+          </div>
+         </div>
+         <div class="tl-item">
+          <div class="tl-time">Step 2</div>
+          <div class="tl-content">
+           <div class="tl-location">เดินเท้าไปยังโรงแรม</div>
+           <div class="tl-desc">
+            เดินจากสถานี Namba ➔ โรงแรม Welina Hotel
+            <div class="tl-meta" style="margin-top: 6px;">
+             <span class="micro-badge time">⏱️ เดิน ~7 นาที</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </article>
+      </div>
+     </section>
+     <section class="section-canva transit-sec-2">
+      <div class="section-title">
+       <div>
+        <h2>คู่มือการเดินทางขากลับ</h2>
+        <p>Welina Hotel Premier Shinsaibashi ➔ Hotel Nikko Kansai Airport</p>
+       </div>
+       <span class="pill">🏨 ➔ ✈️ Hotel to Airport</span>
+      </div>
+      <article class="canva-card">
+       <h3 class="card-title text-center">
+        รถไฟ Nankai + เดินเชื่อมเข้าโรงแรมสนามบิน
+       </h3>
+       <div class="timeline">
+        <div class="tl-item">
+         <div class="tl-time">Step 1</div>
+         <div class="tl-content">
+          <div class="tl-location">เดินจากโรงแรมไปยังสถานี Namba</div>
+          <div class="tl-desc">
+           ออกจากโรงแรม Welina Hotel ➔ เดินเท้าไปยังสถานีรถไฟใต้ดิน Osaka Metro Namba
+           <div class="tl-meta" style="margin-top: 6px;">
+            <span class="micro-badge time">⏱️ เดิน ~5 นาที</span>
+            <span class="micro-badge option">Exit 14</span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="tl-item">
+         <div class="tl-time">Step 2</div>
+         <div class="tl-content">
+          <div class="tl-location">ขึ้นรถไฟ Nankai มุ่งหน้าสู่สนามบิน KIX</div>
+          <div class="tl-desc">
+           นั่งรถไฟจากสถานี Namba ➔ สถานี Kansai-Airport (เลือกเดินทางได้ 2 รูปแบบ)
+           <div class="tl-meta" style="margin-top: 8px; margin-bottom: 8px; gap: 8px; display: flex; flex-wrap: wrap;">
+            <div style="margin-bottom: 4px;">
+             <span class="micro-badge transit">🚆 Airport Express</span>
+             <span class="micro-badge price">💵 ¥970 (~198.59 บาท)</span>
+             <span class="micro-badge time">⏱️ 40-50 นาที</span>
+            </div>
+            <div>
+             <span class="micro-badge transit">🚆 Rapi:t (Ltd Exp)</span>
+             <span class="micro-badge price">💵 ¥1,670 (~341.91 บาท)</span>
+             <span class="micro-badge time">⏱️ 34-39 นาที</span>
+            </div>
+           </div>
+           <p style="margin: 6px 0 0; font-size: 0.88rem; line-height: 1.45;">
+            * ปลายทางลงที่สถานี <strong>Kansai-Airport Station (KIX)</strong><br>
+            * ใช้เวลาเดินทางรวมประมาณ <strong>40-50 นาที</strong>
+           </p>
+          </div>
+         </div>
+        </div>
+        <div class="tl-item">
+         <div class="tl-time">Step 3</div>
+         <div class="tl-content">
+          <div class="tl-location">เดินจากสถานีรถไฟเข้าสู่โรงแรม Nikko</div>
+          <div class="tl-desc">
+           เดินเชื่อมตรงจากชานชาลาสถานีรถไฟสนามบินไปยังอาคาร <strong>Aero Plaza</strong>
+           <div class="tl-meta" style="margin-top: 6px;">
+            <span class="micro-badge time">⏱️ เดิน ~3-5 นาที</span>
+            <span class="micro-badge option">Aero Plaza</span>
+           </div>
+           <p style="margin: 6px 0 0; font-size: 0.88rem; line-height: 1.45;">
+            * สามารถเดินตามป้ายบอกทาง <strong>Hotel / Aeroplaza</strong> มีทางเชื่อมต่อชั้นอาคารสะดวกสบาย ไม่ต้องออกนอกตัวตึก
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </article>
+     </section>
+     <section class="section-canva hotel-sec">
+      <div class="section-title">
+       <div>
+        <h2>รายละเอียดที่พัก</h2>
+        <p>ข้อมูลโรงแรมและทางออกรถไฟใต้ดินที่สะดวกที่สุด</p>
+       </div>
+       <span class="pill">🏨 2 Hotels</span>
+      </div>
+      <div class="grid-2">
+       
+       <!-- Hotel 1 Card -->
+       <article class="canva-card">
+        <h3 class="card-title text-center">
+         Hotel 1: Welina Hotel Premier Shinsaibashi
+        </h3>
+        <div style="margin-bottom: 12px; font-size: 0.95rem;">
+         📍 <strong>ที่ตั้ง:</strong> ย่าน Namba / Dotonbori (Chuo-ku, Osaka)
+        </div>
+        
+        <div class="timeline">
+         <div class="tl-item">
+          <div class="tl-label">🚇 Metro</div>
+          <div class="tl-content">
+           <div class="tl-location">Osaka Metro - Namba Station</div>
+           <div class="tl-desc">
+            <strong>เส้นทางที่ใกล้ที่สุดในการเข้าโรงแรม</strong>
+            <div class="tl-meta" style="margin-top: 6px;">
+             <span class="micro-badge time">🚶‍♂️ เดิน ~5 นาที</span>
+             <span class="micro-badge option">Midosuji / Yotsubashi / Sennichimae</span>
+            </div>
+            <p style="margin: 6px 0 0; font-size: 0.88rem; line-height: 1.45;">
+             * ใช้ <strong>Exit 14 (Namba Station)</strong> เดินออกสู่ถนนหลักแล้วเดินเข้าซอย <strong>Soemon-cho</strong> เพื่อตรงสู่โรงแรม
+            </p>
+           </div>
+          </div>
+         </div>
+         
+         <div class="tl-item">
+          <div class="tl-label">🚇 Kintetsu</div>
+          <div class="tl-content">
+           <div class="tl-location">Osaka Namba Station (Hanshin / Kintetsu)</div>
+           <div class="tl-desc">
+            <div class="tl-meta" style="margin-top: 4px;">
+             <span class="micro-badge time">🚶‍♂️ เดิน ~8 นาที</span>
+             <span class="micro-badge option">Hanshin / Kintetsu Lines</span>
+            </div>
+            <p style="margin: 6px 0 0; font-size: 0.88rem; line-height: 1.45;">
+             * ใช้ <strong>Exit 14 (Osaka Namba / Namba Walk)</strong> เดินผ่านทางเดินใต้ดิน Namba Walk หรือขึ้นมาทางฝั่ง <strong>Dotonbori</strong> แล้วเดินต่อ
+            </p>
+           </div>
+          </div>
+         </div>
+         
+         <div class="tl-item">
+          <div class="tl-label">🚇 Nankai</div>
+          <div class="tl-content">
+           <div class="tl-location">Nankai Namba Station</div>
+           <div class="tl-desc">
+            <div class="tl-meta" style="margin-top: 4px;">
+             <span class="micro-badge time">🚶‍♂️ เดิน ~10 นาที</span>
+             <span class="micro-badge option">Nankai Main Line</span>
+            </div>
+            <p style="margin: 6px 0 0; font-size: 0.88rem; line-height: 1.45;">
+             * ออกทางฝั่ง <strong>Namba City / Nankai Central Exit</strong> เดินตรงตัดผ่านย่าน Dotonbori เข้าสู่ซอย <strong>Soemon-cho</strong>
+            </p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </article>
+
+       <!-- Hotel 2 Card -->
+       <article class="canva-card">
+        <h3 class="card-title text-center">
+         Hotel 2: Hotel Nikko Kansai Airport
+        </h3>
+        <div style="margin-bottom: 12px; font-size: 0.95rem;">
+         📍 <strong>ที่ตั้ง:</strong> บนเกาะสนามบิน Kansai (KIX) เชื่อมกับ Aero Plaza
+        </div>
+        
+        <div class="timeline">
+         <div class="tl-item">
+          <div class="tl-label">🚶‍♂️ Train</div>
+          <div class="tl-content">
+           <div class="tl-location">ใกล้สถานีรถไฟสนามบิน (JR &amp; Nankai)</div>
+           <div class="tl-desc">
+            <strong>สะดวกสำหรับขึ้นรถไฟ JR Haruka หรือ Nankai Rapi:t</strong>
+            <div class="tl-meta" style="margin-top: 6px;">
+             <span class="micro-badge time">🚶‍♂️ เดิน ~3-5 นาที</span>
+             <span class="micro-badge transit">JR &amp; Nankai Station</span>
+            </div>
+            <p style="margin: 6px 0 0; font-size: 0.88rem; line-height: 1.45;">
+             * เดินออกจากสถานีรถไฟสนามบิน Kansai-Airport แล้วตรงไปยังป้าย <strong>Hotel / Aeroplaza</strong> เพื่อผ่านทางเชื่อมเข้าตึกได้เลย
+            </p>
+           </div>
+          </div>
+         </div>
+         
+         <div class="tl-item">
+          <div class="tl-label">✈️ KIX T1</div>
+          <div class="tl-content">
+           <div class="tl-location">เดินทางไป Terminal 1 (สนามบิน KIX)</div>
+           <div class="tl-desc">
+            <strong>เหมาะอย่างยิ่งสำหรับเที่ยวบินขากลับช่วงเช้า</strong>
+            <div class="tl-meta" style="margin-top: 6px;">
+             <span class="micro-badge time">🚶‍♂️ เดิน ~5 นาที</span>
+             <span class="micro-badge option">เชื่อมตรง Terminal 1</span>
+            </div>
+            <p style="margin: 6px 0 0; font-size: 0.88rem; line-height: 1.45;">
+             * มี <strong>สะพานเชื่อมทางเดิน (Concourse)</strong> บนชั้น 2 เชื่อมต่อตรงระหว่างสนามบิน Terminal 1 กับโรงแรม
+            </p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </article>
+
+      </div>
+     </section><section class="section">
+     <div class="section-title">
+      <div>
+       <h2>
+        Daily Plan
+       </h2>
+       <p>
+        เรียงตามวัน พร้อม route และค่ารถที่ต้องใช้บ่อย
+       </p>
+      </div>
+      <span class="pill">
+       6 Days
+      </span>
+     </div>
+     <div class="days-grid">
+      <article class="day-card" id="day1">
+       <div class="day-head">
+        <h3>
+         Day 1
+        </h3>
+        <div class="day-date">
+         เสาร์ 7 Nov 2026
+        </div>
+       </div>
+       <p class="day-theme">
+        ถึงสนามบิน + วัดคัตสึโอจิ (Katsuoji) + แสงสีย่าน Dotonbori
+       </p>
+       <div class="day-blocks">
+        <section class="day-block">
+         <h4>
+          ช่วงเช้า (เดินทางเข้าเมืองและเช็กอิน)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            08:40
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             สนามบิน: KIX Terminal 1
+            </div>
+            <div class="tl-desc">
+             เดินทางถึงสนามบินนานาชาติคันไซ ผ่านด่านตรวจคนเข้าเมือง และรับกระเป๋าสัมภาระ
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~50 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 ฟรี
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            09:30
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: KIX ➔ Namba
+            </div>
+            <div class="tl-desc">
+             เดินทางเข้าเมืองโอซาก้า มุ่งหน้าสู่สถานี Namba ด้วยรถไฟ Nankai Airport Express
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~45 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;970
+              </span>
+              <span class="meta-tag transit">
+               🚇 Nankai Airport Express
+              </span>
+             </div>
+             <div class="sub-steps">
+              <div class="sub-step chosen">
+               <span class="micro-badge chosen-tag">
+                ✅ วิธีหลักที่เลือก
+               </span>
+               <span class="micro-badge transit">
+                🚇 Nankai Airport Express
+               </span>
+               <span class="sub-step-label">
+                Kansai-Airport Station ➔ Namba Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 45 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;970
+               </span>
+              </div>
+              <div class="option-divider">
+               ทางเลือกสำรอง
+              </div>
+              <div class="sub-step" style="opacity: 0.65;">
+               <span class="micro-badge option">
+                ทางเลือก B
+               </span>
+               <span class="micro-badge transit">
+                🚇 Nankai Rapi:t (Ltd Exp)
+               </span>
+               <span class="sub-step-label">
+                Kansai-Airport Station ➔ Namba Station (ระบุที่นั่ง/นั่งสบาย)
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 34 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;1,410
+               </span>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            10:30
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             โรงแรม: Welina Hotel Premier Shinsaibashi
+            </div>
+            <div class="tl-desc">
+             เดินทางจากสถานี Namba เพื่อไปฝากกระเป๋าเดินทางที่โรงแรมและพักผ่อนเล็กน้อย
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~15 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 ฟรี
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+             <div style="font-size: 0.92rem; margin-top: 6px; color: var(--muted);">
+              &bull; เดินเท้าจากสถานี Namba ไปยังโรงแรมในย่านชินไซบาชิ
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="day-block">
+         <h4>
+          ช่วงบ่าย (เดินทางไปวัดดารุมะ Katsuoji)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            11:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: Shinsaibashi Station ➔ วัดคัตสึโอจิ (Katsuoji)
+            </div>
+            <div class="tl-desc">
+             เดินทางขึ้นเหนือสู่เมือง Minoh เพื่อไปวัด Katsuoji
+             <div class="sub-steps">
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Metro Midosuji Line
+               </span>
+               <span class="sub-step-label">
+                Shinsaibashi Station ➔ Minoh-kayano Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 35 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;500
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚌 Hankyu Bus (ชานชาลา 8)
+               </span>
+               <span class="sub-step-label">
+                Minoh-kayano Station ➔ ป้าย Katsuoji Temple
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 25 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;800
+               </span>
+              </div>
+             </div>
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~1.5 ชม. (รวมเวลารอบัส)
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;1,300
+              </span>
+              <span class="meta-tag transit">
+               🚇 Metro Midosuji Line ➔ 🚌 Hankyu Bus
+              </span>
+             </div>
+             <div style="margin-top: 6px;">
+              <a href="#katsuoji-bus" style="color: #8a4f35; font-weight: 700; text-decoration: underline; font-size: 0.92rem;">
+               📊 ดูตารางเวลารถบัส Hankyu Bus (ไป-กลับ)
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            12:30
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             สถานที่: วัดคัตสึโอจิ (Katsuoji Temple)
+            </div>
+            <div class="tl-desc">
+             วัดแห่งชัยชนะอันเลื่องชื่อ ชมตุ๊กตาดารุมะนำโชคนับพันตั้งเรียงรายรอบวัด ขอพรเรื่องการงานและการเรียน เดินชมบรรยากาศธรรมชาติ และรับประทานอาหารกลางวันหรือของว่างที่ร้านค้าหน้าวัดตามอัธยาศัย
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~2.5 ชม.
+              </span>
+              <span class="meta-tag price">
+               💵 ค่าเข้า &yen;500
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้าภายในวัด
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            15:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: วัดคัตสึโอจิ ➔ Namba (Osaka)
+            </div>
+            <div class="tl-desc">
+             นั่งรถบัสย้อนกลับมาที่สถานี Minoh-kayano แล้วขึ้นรถไฟยิงยาวกลับเข้าสู่ย่านใจกลางเมืองโอซาก้า
+             <div class="sub-steps">
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚌 Hankyu Bus
+               </span>
+               <span class="sub-step-label">
+                ป้าย Katsuoji Temple ➔ Minoh-kayano Station (มีรอบบัสขากลับ 15:00 / 15:10 / 15:20)
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 25 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;800
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Metro Midosuji Line
+               </span>
+               <span class="sub-step-label">
+                Minoh-kayano Station ➔ Namba Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 39 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;500
+               </span>
+              </div>
+             </div>
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~1.5 ชม. (รวมเวลารอบัส)
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;1,300
+              </span>
+              <span class="meta-tag transit">
+               🚌 Hankyu Bus ➔ 🚇 Metro Midosuji Line
+              </span>
+             </div>
+             <div style="margin-top: 6px;">
+              <a href="#katsuoji-bus" style="color: #8a4f35; font-weight: 700; text-decoration: underline; font-size: 0.92rem;">
+               📊 ดูตารางเวลารถบัส Hankyu Bus (ไป-กลับ)
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            16:30
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             พักผ่อน: กลับถึงย่าน Namba / Shinsaibashi
+            </div>
+            <div class="tl-desc">
+             กลับถึงสถานี Namba เดินกลับไปล้างหน้า พักผ่อน ชาร์จแบตเตอรี่ในโรงแรมก่อนเริ่มกิจกรรมแสงสียามเย็น
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~1 ชม.
+              </span>
+              <span class="meta-tag price">
+               💵 ฟรี
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="day-block">
+         <h4>
+          ช่วงเย็น (ถ่ายรูปแลนด์มาร์คและทานมื้อค่ำ)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            18:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             แลนด์มาร์ค: Dotonbori (ป้ายกูลิโกะ)
+            </div>
+            <div class="tl-desc">
+             แวะถ่ายรูปจุดเช็กอินยอดนิยมคู่กับป้ายไฟนีออน Glico Running Man ริมแม่น้ำโดทนโบริ
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~1 ชม.
+              </span>
+              <span class="meta-tag price">
+               💵 ฟรี
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            19:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             มื้อค่ำ: Nikoniko Nabe Dotonbori
+            </div>
+            <div class="tl-desc">
+             ทานอาหารมื้อเย็นแสนอร่อย เมนูหม้อไฟชาบู/สุกี้ยากี้สไตล์ญี่ปุ่นดั้งเดิม
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~1.5 ชม.
+              </span>
+              <span class="meta-tag price">
+               💵 ตามราคาเมนู
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            20:30
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             พักผ่อน: Dotonbori &amp; Namba
+            </div>
+            <div class="tl-desc">
+             เดินเล่นดูแสงสีรอบค่ำ ช้อปปิ้งร้านค้าและดองกี้ส่งท้ายก่อนเดินกลับโรงแรม
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~1.5 ชม.
+              </span>
+              <span class="meta-tag price">
+               💵 ตามอัธยาศัย
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+       </div>
+       <div class="day-cost-summary">
+        <span>
+          💰 ค่าเดินทางวันนี้: ประมาณ &yen;3,570 - &yen;4,010 / คน (รวมรถไฟเข้าเมือง KIX ➔ Namba และรถไฟ+บัส ไป-กลับวัด Katsuoji)
+        </span>
+       </div>
+      </article>
+      <article class="day-card" id="day2">
+       <div class="day-head">
+        <h3>
+         Day 2
+        </h3>
+        <div class="day-date">
+         อาทิตย์ 8 Nov 2026
+        </div>
+       </div>
+       <p class="day-theme">
+        Kyoto Day Trip (Arashiyama + Nishiki Market)
+       </p>
+       <div class="day-blocks">
+        <section class="day-block">
+         <h4>
+          ช่วงเช้า (เดินทางและเที่ยวธรรมชาติ)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            08:30
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: Namba Station ➔ Arashiyama Station
+            </div>
+            <div class="tl-desc">
+             นั่งรถไฟใต้ดินและรถไฟเอกชนข้ามเมือง เลี่ยงเมืองเกียวโต มุ่งตรงสู่โซนธรรมชาติอาราชิยามาทางทิศตะวันตก
+             <div class="sub-steps">
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Metro Midosuji Line
+               </span>
+               <span class="sub-step-label">
+                Namba Station ➔ Umeda Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 8 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;240
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚶 เดินเท้าเปลี่ยนสาย
+               </span>
+               <span class="sub-step-label">
+                Umeda Station ➔ Hankyu Osaka-Umeda Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 8 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 ฟรี
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Hankyu Kyoto Line
+               </span>
+               <span class="sub-step-label">
+                Osaka-Umeda Station ➔ Katsura Station (Ltd Express)
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 35 นาที
+               </span>
+               <span style="font-size: 0.85rem; color: var(--muted); font-style: italic;">
+                * ตั๋ว Hankyu
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Hankyu Arashiyama Line
+               </span>
+               <span class="sub-step-label">
+                Katsura Station ➔ Arashiyama Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 7 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;410
+               </span>
+               <span style="font-size: 0.85rem; color: var(--muted); font-style: italic;">
+                * ตั๋ว Hankyu รวม &yen;410
+               </span>
+              </div>
+             </div>
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~55 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;650
+              </span>
+              <span class="meta-tag transit">
+               🚇 Metro Midosuji Line ➔ Hankyu Kyoto/Arashiyama Line
+              </span>
+             </div>
+             <div style="margin-top: 6px;">
+              <a href="https://maps.app.goo.gl/auJwroJYXpCNLAtj9" style="color: #8a4f35; font-weight: 700; text-decoration: underline; font-size: 0.92rem;" target="_blank">
+               🔗 ดูเส้นทางบน Google Maps
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            09:45
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินเท้า: Arashiyama Station ➔ ป่าไผ่อาราชิยามะ
+            </div>
+            <div class="tl-desc">
+             เดินข้ามสะพานไม้ประวัติศาสตร์และผ่านย่านการค้าท้องถิ่นเพื่อไปสัมผัสป่าไผ่
+             <div class="sub-steps">
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚶 เดินเท้า
+               </span>
+               <span class="sub-step-label">
+                Arashiyama Station ➔ สะพานโทเก็ตสึเคียว (Togetsukyo Bridge)
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 7-10 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 ฟรี
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚶 เดินเท้า
+               </span>
+               <span class="sub-step-label">
+                สะพานโทเก็ตสึเคียว ➔ ป่าไผ่อาราชิยามะ (Bamboo Grove)
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 10 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 ฟรี
+               </span>
+              </div>
+             </div>
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~15-20 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 ฟรี
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้าข้ามสะพานโทเก็ตสึเคียว
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="day-block">
+         <h4>
+          ช่วงกลางวันถึงบ่าย (กินสตรีทฟู้ดและเที่ยววัด)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            12:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: ป่าไผ่ ➔ ตลาดนิชิกิ (Nishiki Market)
+            </div>
+            <div class="tl-desc">
+             เดินทางกลับจากย่านอาราชิยามาเข้าสู่ตลาดอาหารสตรีทฟู้ดใจกลางเกียวโต
+             <div class="sub-steps">
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚶 เดินเท้า
+               </span>
+               <span class="sub-step-label">
+                ป่าไผ่ ➔ สถานี Hankyu Arashiyama
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 15 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 ฟรี
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Hankyu Arashiyama Line
+               </span>
+               <span class="sub-step-label">
+                Arashiyama Station ➔ Katsura Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 7 นาที
+               </span>
+               <span style="font-size: 0.85rem; color: var(--muted); font-style: italic;">
+                * ตั๋ว Hankyu
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Hankyu Kyoto Line
+               </span>
+               <span class="sub-step-label">
+                Katsura Station ➔ Karasuma Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 18 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;240
+               </span>
+               <span style="font-size: 0.85rem; color: var(--muted); font-style: italic;">
+                * ตั๋ว Hankyu รวม &yen;240
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚶 เดินเท้า
+               </span>
+               <span class="sub-step-label">
+                Karasuma Station ➔ ตลาดนิชิกิ (Nishiki Market)
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 3-5 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 ฟรี
+               </span>
+              </div>
+             </div>
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~40-45 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;240
+              </span>
+              <span class="meta-tag transit">
+               🚇 Hankyu Kyoto/Arashiyama Line
+              </span>
+             </div>
+             <div style="margin-top: 6px;">
+              <a href="https://maps.app.goo.gl/D2Q8iK2a3TfCHhQK6" style="color: #8a4f35; font-weight: 700; text-decoration: underline; font-size: 0.92rem;" target="_blank">
+               🔗 ดูเส้นทางบน Google Maps
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            14:30
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: ตลาดนิชิกิ ➔ วัดน้ำใส (Kiyomizu-dera)
+            </div>
+            <div class="tl-desc">
+             นั่งรถบัสประจำทางขึ้นไปยังย่านวัดมรดกโลกฮิกาชิยามา เดินลัดเลาะตามถนนโบราณและเจดีย์ยาซากะ
+             <div class="sub-steps">
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚶 เดินเท้า
+               </span>
+               <span class="sub-step-label">
+                ตลาดนิชิกิ ➔ ป้ายรถบัส Shijo Karasuma หรือ Shijo Kawaramachi
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 5-10 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 ฟรี
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚌 Kyoto City Bus
+               </span>
+               <span class="sub-step-label">
+                ป้าย Shijo ➔ ลงป้าย Kiyomizu-michi (สาย 207)
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 15 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;230
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚶 เดินขึ้นเนิน
+               </span>
+               <span class="sub-step-label">
+                ป้าย Kiyomizu-michi ➔ เจดีย์ยาซากะ (Yasaka Pagoda)
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 5-8 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 ฟรี
+               </span>
+               <span style="font-size: 0.85rem; color: var(--muted); font-style: italic;">
+                * ถ่ายรูปมุมมหาชน
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚶 เดินต่อขึ้นวัด
+               </span>
+               <span class="sub-step-label">
+                เจดีย์ยาซากะ ➔ วัดน้ำใส (Kiyomizu-dera) ผ่านถนนโบราณ
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 5-8 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 ฟรี
+               </span>
+              </div>
+             </div>
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~25-30 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;230
+              </span>
+              <span class="meta-tag transit">
+               🚌 Kyoto City Bus (สาย 207) + เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="day-block">
+         <h4>
+          ช่วงเย็น (เดินทางกลับโอซาก้า)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            17:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: วัดน้ำใส ➔ Namba (Osaka)
+            </div>
+            <div class="tl-desc">
+             เดินทางลงมาขึ้นรถไฟสาย Keihan ยิงยาวกลับเข้าโอซาก้า และต่อรถไฟใต้ดินกลับที่พัก
+             <div class="sub-steps">
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚶 เดินลงเนิน
+               </span>
+               <span class="sub-step-label">
+                วัดน้ำใส ➔ สถานี Kiyomizu-Gojo หรือ Gion-Shijo
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 15-20 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 ฟรี
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Keihan Main Line
+               </span>
+               <span class="sub-step-label">
+                Gion-Shijo / Kiyomizu-Gojo ➔ สถานี Yodoyabashi (Ltd Exp)
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 48 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;430
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Metro Midosuji Line
+               </span>
+               <span class="sub-step-label">
+                Yodoyabashi Station ➔ Namba Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 5 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;240
+               </span>
+              </div>
+             </div>
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~55-60 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;670
+              </span>
+              <span class="meta-tag transit">
+               🚇 Keihan Main Line ➔ Metro Midosuji Line
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+       </div>
+       <div class="day-cost-summary">
+        💰 ค่าเดินทางวันนี้: ประมาณ &yen;1,790 / คน (เดินทางตามแผน Google Maps ที่เลือก)
+       </div>
+      </article>
+      <article class="day-card" id="day3">
+       <div class="day-head">
+        <h3>
+         Day 3
+        </h3>
+        <div class="day-date">
+         จันทร์ 9 Nov 2026
+        </div>
+       </div>
+       <p class="day-theme">
+        Universal Studios Japan
+       </p>
+       <div class="day-blocks">
+        <section class="day-block">
+         <h4>
+          ทั้งวัน (ลุยสวนสนุกเต็มที่)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            07:30
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: Osaka-Namba Station ➔ Universal City
+            </div>
+            <div class="tl-desc">
+             นั่งรถไฟจากที่พักมุ่งตรงสู่สวนสนุกระดับโลก ยูนิเวอร์แซล สตูดิโอส์ เจแปน
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~30 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;380
+              </span>
+              <span class="meta-tag transit">
+               🚇 Hanshin Namba Line ➔ JR Yumesaki Line
+              </span>
+             </div>
+             <div class="sub-steps">
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Hanshin Namba Line
+               </span>
+               <span class="sub-step-label">
+                Osaka-Namba Station ➔ Nishikujo Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 8 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;220
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 JR Yumesaki Line
+               </span>
+               <span class="sub-step-label">
+                Nishikujo Station ➔ Universal City Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 6 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;160
+               </span>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            08:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             ท่องเที่ยว: Universal Studios Japan (USJ)
+            </div>
+            <div class="tl-desc">
+             สนุกสนานกับเครื่องเล่นและธีมปาร์คต่างๆ เช่นแฮร์รี่ พอตเตอร์ หรือ มาริโอ้ ตลอดทั้งวัน
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ทั้งวัน (12 ชม.)
+              </span>
+              <span class="meta-tag price">
+               💵 ตามราคาตั๋ว
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+             <div style="font-size: 0.92rem; margin-top: 6px; color: var(--muted);">
+              &bull; เดินเท้าเพียง 3-5 นาทีจากสถานีรถไฟเข้าสู่ประตูทางเข้าหลักของสวนสนุก
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            20:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: Universal City Station ➔ Namba
+            </div>
+            <div class="tl-desc">
+             เดินทางกลับจากสวนสนุกมุ่งหน้าสู่ที่พักในตัวเมืองโอซาก้าหลังสวนสนุกปิด
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~30 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;380
+              </span>
+              <span class="meta-tag transit">
+               🚇 JR Yumesaki Line ➔ Hanshin Namba Line
+              </span>
+             </div>
+             <div class="sub-steps">
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 JR Yumesaki Line
+               </span>
+               <span class="sub-step-label">
+                Universal City Station ➔ Nishikujo Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 6 นาที
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Hanshin Namba Line
+               </span>
+               <span class="sub-step-label">
+                Nishikujo Station ➔ Osaka-Namba Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 8 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;380
+               </span>
+               <span style="font-size: 0.85rem; color: var(--muted); font-style: italic;">
+                * ค่าโดยสารรวม &yen;380
+               </span>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+       </div>
+       <div class="day-cost-summary">
+        <span>
+         💰 ค่าเดินทางวันนี้: ประมาณ &yen;760 / คน (รถไฟไป-กลับ USJ)
+        </span>
+       </div>
+      </article>
+      <article class="day-card" id="day4">
+       <div class="day-head">
+        <h3>
+         Day 4
+        </h3>
+        <div class="day-date">
+         อังคาร 10 Nov 2026
+        </div>
+       </div>
+       <p class="day-theme">
+        Osaka Aquarium Kaiyukan + Tempozan + MooKEN
+       </p>
+       <div class="day-blocks">
+        <section class="day-block">
+         <h4>
+          ช่วงเช้า (เที่ยวอควาเรียมริมอ่าว)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            09:30
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: Shinsaibashi Station ➔ Osakako Station
+            </div>
+            <div class="tl-desc">
+             นั่งรถไฟใต้ดินโอซาก้ามุ่งหน้าสู่ท่าเรือริมอ่าวโอซาก้า
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~20 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;290
+              </span>
+              <span class="meta-tag transit">
+               🚇 Osaka Metro (Sennichimae ➔ Chuo Line)
+              </span>
+             </div>
+             <div class="sub-steps">
+              <div class="sub-step">
+               <span class="micro-badge option">
+                เส้นทาง 1
+               </span>
+               <span class="micro-badge transit">
+                🚇 Metro Sennichimae ➔ Chuo Line
+               </span>
+               <span class="sub-step-label">
+                Namba Station ➔ Awaza Station ➔ Osakako Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 20 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;290
+               </span>
+               <span style="font-size: 0.85rem; color: var(--muted); font-style: italic;">
+                * เปลี่ยนขบวนที่ Awaza
+               </span>
+              </div>
+              <div class="option-divider">
+               หรือ
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge option">
+                เส้นทาง 2
+               </span>
+               <span class="micro-badge transit">
+                🚇 Metro Midosuji ➔ Chuo Line
+               </span>
+               <span class="sub-step-label">
+                Shinsaibashi Station ➔ Honmachi Station ➔ Osakako Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 20 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;290
+               </span>
+               <span style="font-size: 0.85rem; color: var(--muted); font-style: italic;">
+                * เปลี่ยนขบวนที่ Honmachi
+               </span>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            10:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             ท่องเที่ยว: Osaka Aquarium Kaiyukan
+            </div>
+            <div class="tl-desc">
+             เข้าชมอควาเรียมระดับโลก ชมแทงก์น้ำยักษ์ที่มีปลาฉลามวาฬตัวใหญ่และสัตว์ทะเลหายาก
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~3 ชม.
+              </span>
+              <span class="meta-tag price">
+               💵 ตามราคาบัตร
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+             <div style="font-size: 0.92rem; margin-top: 6px; color: var(--muted);">
+              &bull; เดินเท้าประมาณ 5-10 นาทีจากสถานี Osakako ไปยังทางเข้าหลักอควาเรียม
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="day-block">
+         <h4>
+          ช่วงบ่าย (เดินห้างและขึ้นชิงช้าสวรรค์)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            13:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             ท่องเที่ยว: Tempozan Harbor Village
+            </div>
+            <div class="tl-desc">
+             ทานอาหารกลางวันย่านตรอกอาหารโบราณ และช้อปปิ้งห้างริมอ่าวเทมโปซานข้างอควาเรียม
+             <div class="sub-steps">
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Metro Chuo Line
+               </span>
+               <span class="sub-step-label">
+                Osakako Station ➔ Awaza Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 11 นาที
+               </span>
+              </div>
+              <div class="sub-step">
+               <span class="micro-badge transit">
+                🚇 Metro Sennichimae Line
+               </span>
+               <span class="sub-step-label">
+                Awaza Station ➔ Namba Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 4 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;290
+               </span>
+               <span style="font-size: 0.85rem; color: var(--muted); font-style: italic;">
+                * ค่าโดยสารรวม &yen;290
+               </span>
+              </div>
+             </div>
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~1.5 ชม.
+              </span>
+              <span class="meta-tag price">
+               💵 ตามอัธยาศัย
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            14:30
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             ท่องเที่ยว: Tempozan Ferris Wheel
+            </div>
+            <div class="tl-desc">
+             ขึ้นชิงช้าสวรรค์ขนาดใหญ่ยักษ์เพื่อชมมุมมองอ่าวโอซาก้าแบบพาโนรามามุมสูง
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~30 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;800
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="day-block">
+         <h4>
+          ช่วงเย็น (กลับเข้าเมืองและชิมของหวาน)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            17:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: Osakako Station ➔ Shinsaibashi
+            </div>
+            <div class="tl-desc">
+             นั่งรถไฟใต้ดินเส้นทางเดิมเดินทางกลับเข้าย่านที่พักในโอซาก้า
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~20 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;290
+              </span>
+              <span class="meta-tag transit">
+               🚇 Osaka Metro (Chuo ➔ Sennichimae Line)
+              </span>
+             </div>
+             <div style="font-size: 0.92rem; margin-top: 6px; color: var(--muted);">
+              &bull; ขึ้นรถไฟย้อนกลับเส้นทางเดิมกลับมาลงสถานี Shinsaibashi หรือ Namba
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            17:45
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             ชิมขนมหวาน: ร้าน MooKEN
+            </div>
+            <div class="tl-desc">
+             แวะลิ้มรสชูครีมแป้งกรอบและครีมสดรสเลิศของร้านชื่อดังย่านชินไซบาชิ
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~30 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 ตามราคาร้าน
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+             <div style="font-size: 0.92rem; margin-top: 6px; color: var(--muted);">
+              &bull; เดินเท้าสั้นๆ จากสถานีรถไฟ Shinsaibashi ไปยังหน้าร้านขนมหวาน
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+       </div>
+       <div class="day-cost-summary">
+        <span>
+         💰 ค่าเดินทางวันนี้: ประมาณ &yen;580 / คน (รถไฟใต้ดินไป-กลับ Kaiyukan)
+        </span>
+       </div>
+      </article>
+      <article class="day-card" id="day5">
+       <div class="day-head">
+        <h3>
+         Day 5
+        </h3>
+        <div class="day-date">
+         พุธ 11 Nov 2026
+        </div>
+       </div>
+       <p class="day-theme">
+        Shopping + ย้ายโรงแรม
+       </p>
+       <div class="day-blocks">
+        <section class="day-block">
+         <h4>
+          ช่วงเช้าและกลางวัน (เช็กเอาต์และช้อปปิ้งส่งท้าย)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            11:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เช็กเอาต์: Welina Hotel
+            </div>
+            <div class="tl-desc">
+             เช็กเอาต์ออกจากห้องพักและฝากกระเป๋าเดินทางใบใหญ่ไว้ที่เคาน์เตอร์โรงแรม
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~15 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 ฟรี
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            11:30
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             ช้อปปิ้ง: Shinsaibashi - Namba
+            </div>
+            <div class="tl-desc">
+             ทานอาหารกลางวันมื้อส่งท้าย เดินเก็บตกซื้อเสื้อผ้า ยา เครื่องสำอาง หรือของฝากต่างๆ
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~5 ชม.
+              </span>
+              <span class="meta-tag price">
+               💵 ตามอัธยาศัย
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="day-block">
+         <h4>
+          ช่วงบ่ายแก่ๆ (เดินทางไปสนามบิน)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            16:30
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             รับสัมภาระ: Welina Hotel ➔ Namba
+            </div>
+            <div class="tl-desc">
+             เดินกลับมารับกระเป๋าเดินทางที่ฝากไว้ที่ล็อบบี้ แล้วลากกระเป๋าไปสถานีรถไฟ
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~30 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 ฟรี
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+             <div style="font-size: 0.92rem; margin-top: 6px; color: var(--muted);">
+              &bull; เดินลากกระเป๋าเดินทางไปทางสถานีรถไฟ Nankai Namba
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            17:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: Nankai Namba Station ➔ Kansai-Airport
+            </div>
+            <div class="tl-desc">
+             เดินทางไปสนามบินคันไซเพื่อย้ายที่พักค้างคืนสุดท้ายใกล้สนามบินด้วยรถไฟ Nankai Rapi:t (Ltd Exp)
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~39 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 &yen;1,410
+              </span>
+              <span class="meta-tag transit">
+               🚇 Nankai Rapi:t (Ltd Exp)
+              </span>
+             </div>
+             <div class="sub-steps">
+              <div class="sub-step" style="opacity: 0.65;">
+               <span class="micro-badge option">
+                ทางเลือก A
+               </span>
+               <span class="micro-badge transit">
+                🚇 Nankai Airport Express
+               </span>
+               <span class="sub-step-label">
+                Namba Station ➔ Kansai-Airport Station
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 49 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;970
+               </span>
+              </div>
+              <div class="option-divider">
+               ทางเลือกสำรอง
+              </div>
+              <div class="sub-step chosen">
+               <span class="micro-badge chosen-tag">
+                ✅ วิธีหลักที่เลือก
+               </span>
+               <span class="micro-badge transit">
+                🚇 Nankai Rapi:t (Ltd Exp)
+               </span>
+               <span class="sub-step-label">
+                Namba Station ➔ Kansai-Airport Station (ระบุที่นั่ง/นั่งสบาย)
+               </span>
+               <span class="micro-badge time">
+                ⏱️ 39 นาที
+               </span>
+               <span class="micro-badge price">
+                💵 &yen;1,410
+               </span>
+              </div>
+             </div>
+         <div class="fact-row">
+          <span class="fact">
+           Nankai Airport Express: &yen;970
+          </span>
+          <span class="fact">
+           Nankai Rapi:t: &yen;1,410 - &yen;1,590
+          </span>
+         </div>
+        </section>
+        <section class="day-block">
+         <h4>
+          ช่วงเย็น (เช็กอินที่พักสุดท้าย)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            17:50
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: Kansai-Airport Station
+            </div>
+            <div class="tl-desc">
+             ถึงสถานีสนามบินคันไซ ลากกระเป๋าผ่านทางเชื่อมข้ามไปฝั่งอาคาร Aeroplaza
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~10 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 ฟรี
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            18:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เช็กอิน: Hotel Nikko Kansai Airport
+            </div>
+            <div class="tl-desc">
+             ทำการเช็กอินเข้าสู่โรงแรมสุดท้าย พักผ่อน ทานอาหารค่ำ เพื่อไฟลต์บินพรุ่งนี้เช้า
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~15 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 ฟรี
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+             <div style="font-size: 0.92rem; margin-top: 6px; color: var(--muted);">
+              &bull; โรงแรมตั้งอยู่ในอาคาร Aeroplaza เชื่อมติดกับตัวอาคารสนามบินเดินไปเทอร์มินอลได้สะดวกรวดเร็ว
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+       </div>
+       <div class="day-cost-summary">
+        <span>
+         💰 ค่าเดินทางวันนี้: &yen;1,410 / คน (เดินทางด้วยรถไฟ Nankai Rapi:t)
+        </span>
+       </div>
+      </article>
+      <article class="day-card" id="day6">
+       <div class="day-head">
+        <h3>
+         Day 6
+        </h3>
+        <div class="day-date">
+         พฤหัส 12 Nov 2026
+        </div>
+       </div>
+       <p class="day-theme">
+        Flight Back
+       </p>
+       <div class="day-blocks">
+        <section class="day-block">
+         <h4>
+          ช่วงเช้า (เดินทางกลับประเทศไทย)
+         </h4>
+         <div class="timeline">
+          <div class="tl-item">
+           <div class="tl-time">
+            07:00
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: Hotel Nikko Kansai Airport ➔ Terminal 1
+            </div>
+            <div class="tl-desc">
+             เช็กเอาต์และลากกระเป๋าข้ามทางเชื่อมโดยตรงเข้าสู่อาคารผู้โดยสารหลัก
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~15 นาที
+              </span>
+              <span class="meta-tag price">
+               💵 ฟรี
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            07:15
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             สนามบิน: KIX Terminal 1
+            </div>
+            <div class="tl-desc">
+             ทำการโหลดกระเป๋า เช็กอินบัตรโดยสารสายการบิน และผ่านด่านตรวจคนเข้าเมืองขาออก
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~2.5 ชม.
+              </span>
+              <span class="meta-tag price">
+               💵 ฟรี
+              </span>
+              <span class="meta-tag transit">
+               🚶 เดินเท้า
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="tl-item">
+           <div class="tl-time">
+            09:55
+           </div>
+           <div class="tl-content">
+            <div class="tl-location">
+             เดินทาง: KIX Terminal 1 ➔ DMK Terminal 1
+            </div>
+            <div class="tl-desc">
+             ออกเดินทางข้ามประเทศกลับสู่ท่าอากาศยานดอนเมืองโดยสวัสดิภาพ (เที่ยวบิน XJ613)
+             <div class="tl-meta">
+              <span class="meta-tag duration">
+               ⏱️ ~6.5 ชม.
+              </span>
+              <span class="meta-tag price">
+               💵 รวมในตั๋วแล้ว
+              </span>
+              <span class="meta-tag transit">
+               ✈️ Thai AirAsia X (เที่ยวบิน XJ613)
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+       </div>
+       <div class="day-cost-summary">
+        <span>
+         💰 ค่าเดินทางวันนี้: ประมาณ &yen;0 / คน (เดินเท้าจากโรงแรมเชื่อมไปยัง Terminal 1)
+        </span>
+       </div>
+      </article>
+     </div>
+    </section>
+    <section class="section deep" id="fares">
+     <div class="section-title">
+      <div>
+       <h2>
+        สรุปราคาค่าเดินทางหลัก
+       </h2>
+       <p>
+        ราคาผู้ใหญ่แบบเที่ยวเดียว เว้นแต่จะระบุไว้เป็นอย่างอื่น
+       </p>
+      </div>
+      <span class="pill">
+       Quick Budget
+      </span>
+     </div>
+     <table class="transit-table">
+      <thead>
+       <tr>
+        <th>
+         วัน (Day)
+        </th>
+        <th>
+         เส้นทางเดินทาง
+        </th>
+        <th>
+         ค่าเดินทางต่อคน
+        </th>
+        <th>
+         วิธีการเดินทางหลัก
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         <strong>
+          Day 1
+         </strong>
+         (7 Nov)
+        </td>
+        <td>
+         KIX ➔ Namba ➔ Katsuoji (ไป-กลับ)
+        </td>
+        <td>
+         &yen;3,570
+        </td>
+        <td>
+         Nankai Airport Express + Metro + Hankyu Bus
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Day 2
+         </strong>
+         (8 Nov)
+        </td>
+        <td>
+         Osaka &harr; Kyoto (เกียวโต)
+        </td>
+        <td>
+         &yen;1,790
+        </td>
+        <td>
+         Metro + Hankyu + Kyoto Bus + Keihan Line
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Day 3
+         </strong>
+         (9 Nov)
+        </td>
+        <td>
+         Namba &harr; USJ (สวนสนุก)
+        </td>
+        <td>
+         &yen;760
+        </td>
+        <td>
+         Hanshin Line + JR Line
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Day 4
+         </strong>
+         (10 Nov)
+        </td>
+        <td>
+         Namba &harr; Kaiyukan (อควาเรียม)
+        </td>
+        <td>
+         &yen;580
+        </td>
+        <td>
+         Osaka Metro (Sennichimae &amp; Chuo Line)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Day 5
+         </strong>
+         (11 Nov)
+        </td>
+        <td>
+         Namba ➔ KIX (ย้ายไปสนามบิน)
+        </td>
+        <td>
+         &yen;1,410
+        </td>
+        <td>
+         Nankai Rapi:t (Ltd Exp)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Day 6
+         </strong>
+         (12 Nov)
+        </td>
+        <td>
+         KIX ➔ BKK (กลับกรุงเทพฯ)
+        </td>
+        <td>
+         &yen;0
+        </td>
+        <td>
+         เดินเท้าไป Terminal 1 (ทางเชื่อม Nikko)
+        </td>
+       </tr>
+       <tr class="total-row">
+        <td>
+         รวมค่าเดินทางหลัก
+        </td>
+        <td>
+         ตลอดทั้งทริป 6 วัน
+        </td>
+        <td>
+         <strong>
+          &yen;8,110
+         </strong>
+         / คน
+        </td>
+        <td>
+         * คำนวณเป็นค่าเดินทางต่อคนตามตัวเลือกหลักที่คุณเลือกไว้
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </section>
+
+    <section class="section" id="katsuoji-bus">
+     <div class="section-title">
+      <div>
+       <h2>
+        Katsuoji Hankyu Bus Timetable
+       </h2>
+       <p>
+        ตารางเวลารถบัสเดินทางระหว่างสถานี Minoh-kayano ⇄ วัดคัตสึโอจิ (อัปเดตอย่างเป็นทางการ)
+       </p>
+      </div>
+      <span class="pill">
+       Hankyu Bus (Stop 8)
+      </span>
+     </div>
+     
+     <div class="grid-2" style="margin-top: 14px;">
+       <!-- ขาไป -->
+       <article class="fare-card" style="background: var(--card-soft); padding: 18px; border-radius: var(--radius-xl); border: 1px solid rgba(77, 43, 24, 0.08);">
+         <h3 style="display: flex; align-items: center; gap: 8px; font-family: 'Kanit', sans-serif; margin-top: 0;">
+           🚌 ขาไป: Minoh-kayano ➔ Katsuoji
+         </h3>
+         <p class="subline" style="margin: -4px 0 12px; color: var(--muted); font-size: 0.9rem;">
+           ขึ้นที่รถบัสชานชาลา 8 (ใช้เวลาเดินทางประมาณ 25 นาที / ค่าโดยสาร &yen;800)
+         </p>
+         
+         <div style="margin-bottom: 12px;">
+           <strong style="color: var(--ink); font-size: 0.95rem; display: block; margin-bottom: 4px;">📅 วันธรรมดา (Weekdays):</strong>
+           <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">09:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">09:30</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">10:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">10:30</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">11:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">11:30</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">12:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">12:30</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">13:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">13:30</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">14:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">14:30</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">15:00</span>
+           </div>
+         </div>
+         
+         <div>
+           <strong style="color: #bd1731; font-size: 0.95rem; display: block; margin-bottom: 4px;">📅 วันเสาร์-อาทิตย์ และวันหยุด (Weekends/Holidays):</strong>
+           <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">09:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">09:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">09:40</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">10:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">10:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">10:40</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">11:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">11:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">11:40</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">12:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">12:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">12:40</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">13:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">13:30</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">14:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">14:30</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">15:00</span>
+           </div>
+         </div>
+       </article>
+
+       <!-- ขากลับ -->
+       <article class="fare-card" style="background: var(--card-soft); padding: 18px; border-radius: var(--radius-xl); border: 1px solid rgba(77, 43, 24, 0.08);">
+         <h3 style="display: flex; align-items: center; gap: 8px; font-family: 'Kanit', sans-serif; margin-top: 0;">
+           🚌 ขากลับ: Katsuoji ➔ Minoh-kayano
+         </h3>
+         <p class="subline" style="margin: -4px 0 12px; color: var(--muted); font-size: 0.9rem;">
+           ขึ้นรถบัสที่ป้ายหน้าวัด (ใช้เวลาเดินทางประมาณ 25 นาที / ค่าโดยสาร &yen;800)
+         </p>
+         
+         <div style="margin-bottom: 12px;">
+           <strong style="color: var(--ink); font-size: 0.95rem; display: block; margin-bottom: 4px;">📅 วันธรรมดา (Weekdays):</strong>
+           <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">11:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-style: italic;">11:25*</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">11:50</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">12:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-style: italic;">12:25*</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">12:50</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">13:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-style: italic;">13:25*</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">13:50</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">14:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-style: italic;">14:25*</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">14:50</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">15:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-style: italic;">15:25*</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">15:50</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">16:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-style: italic;">16:35*</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">16:50</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem;">17:05</span>
+           </div>
+         </div>
+         
+         <div>
+           <strong style="color: #bd1731; font-size: 0.95rem; display: block; margin-bottom: 4px;">📅 วันเสาร์-อาทิตย์ และวันหยุด (Weekends/Holidays):</strong>
+           <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">10:30</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">11:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-style: italic; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">11:10*</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">11:30</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">12:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-style: italic; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">12:10*</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">12:30</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">13:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-style: italic; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">13:10*</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">13:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">13:40</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">14:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-style: italic; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">14:10*</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">14:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">14:40</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">15:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-style: italic; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">15:10*</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">15:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">15:40</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">16:00</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">16:20</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">16:40</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-style: italic; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">16:55*</span>
+             <span class="micro-badge time" style="padding: 4px 8px; font-size: 0.82rem; font-weight: bold; background: #fff5f5; border-color: #ffd8d8; color: #bd1731;">17:05</span>
+           </div>
+         </div>
+         <p style="font-size: 0.76rem; color: var(--muted); margin-top: 10px; line-height: 1.3;">
+           *หมายเหตุ: บัสรอบที่มีเครื่องหมายดอกจัน (*) จะวิ่งยาวต่อไปยังสถานีรถไฟ Hankyu Kita-Senri โดยจะจอดผ่านสถานี Minoh-kayano และ Senri-Chuo เช่นเดียวกัน สามารถใช้นั่งกลับได้ปกติครับ
+         </p>
+       </article>
+     </div>
+     
+     <div style="margin-top: 12px; font-size: 0.88rem; color: var(--muted); text-align: right;">
+       🔗 แหล่งข้อมูลอ้างอิง: 
+       <a href="https://katsuo-ji-temple.or.jp/access/" target="_blank" style="text-decoration: underline; color: #8a4f35; font-weight: bold;">
+         ตารางเวลาทางการบนเว็บวัด Katsuoji (ภาษาอังกฤษ/ญี่ปุ่น)
+       </a> | 
+        <a href="https://osaka-info.jp/th/spot/katsuo-ji/" target="_blank" style="text-decoration: underline; color: #8a4f35; font-weight: bold;">
+          ข้อมูลวัด Katsuoji ภาษาไทย (OSAKA-INFO)
+        </a> | 
+        <a href="https://www.tiewyeepoon.com/review/osaka-katsuoji/" target="_blank" style="text-decoration: underline; color: #8a4f35; font-weight: bold;">
+          รีวิววัด Katsuoji ภาษาไทย (เที่ยวญี่ปุ่นด้วยตัวเอง)
+        </a> | 
+       <a href="https://www.hankyubus.co.jp/" target="_blank" style="text-decoration: underline; color: #8a4f35; font-weight: bold;">
+         เว็บไซต์ Hankyu Bus
+       </a>
+     </div>
+    </section>
+
+    <section class="section" id="cheat-sheet">
+     <div class="section-title">
+      <div>
+       <h2>
+        Transit Cheat Sheet
+       </h2>
+       <p>
+        จำชื่อสถานีปลายทางไว้ จะหาทางต่อได้เร็วขึ้น
+       </p>
+      </div>
+      <span class="pill">
+       Station Notes
+      </span>
+     </div>
+     <div class="grid-3">
+      <article class="cheat-card">
+       <h3>
+        Arashiyama
+       </h3>
+       <strong>
+        Hankyu Arashiyama Station
+       </strong>
+      </article>
+      <article class="cheat-card">
+       <h3>
+        Nishiki Market
+       </h3>
+       <strong>
+        Karasuma / Kyoto-Kawaramachi
+       </strong>
+      </article>
+      <article class="cheat-card">
+       <h3>
+        ย่านที่พัก (Namba/Shinsaibashi)
+       </h3>
+       <strong>
+        Shinsaibashi / Namba Station
+       </strong>
+      </article>
+       <article class="cheat-card">
+        <h3>
+         Katsuoji Temple
+        </h3>
+        <strong>
+         Minoh-kayano (ต่อ Hankyu Bus ชานชาลา 8)
+        </strong>
+       </article>
+      <article class="cheat-card">
+       <h3>
+        USJ
+       </h3>
+       <strong>
+        Universal City
+       </strong>
+      </article>
+      <article class="cheat-card">
+       <h3>
+        Kaiyukan
+       </h3>
+       <strong>
+        Osakako
+       </strong>
+      </article>
+      <article class="cheat-card">
+       <h3>
+        คืนสุดท้าย
+       </h3>
+       <strong>
+        Kansai Airport / Aeroplaza
+       </strong>
+      </article>
+     </div>
+    </section>
+    <section class="section notes">
+     <div class="section-title">
+      <div>
+       <h2>
+        Notes
+       </h2>
+       <p>
+        รายละเอียดสำคัญไว้เตือนก่อนเดินทางจริง
+       </p>
+      </div>
+      <span class="pill">
+       Before You Go
+      </span>
+     </div>
+     <ul class="notes-list">
+      <li>
+       ราคาด้านบนเป็นราคาผู้ใหญ่แบบเที่ยวเดียว เว้นแต่จะระบุเป็นอย่างอื่น
+      </li>
+      <li>
+       ราคาและตารางรถไฟอาจเปลี่ยนได้ ควรเช็กอีกครั้งใกล้วันเดินทาง
+      </li>
+      <li>
+       ถ้ามีกระเป๋าใหญ่ วันเข้าเมืองและวันย้ายโรงแรม Rapi:t จะสบายกว่า
+      </li>
+     </ul>
+    </section>
+   </div>
+   <p class="footer-note">
+    Designed as a mobile-friendly itinerary inspired by the referenced Canva palette and card style.
+   </p>
+  </main>
+ </body>
+</html>
