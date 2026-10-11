@@ -312,6 +312,56 @@
       line-height: 1.45;
     }
 
+    .outfit-palette {
+      background: var(--card-bg);
+      border: 1px solid rgba(77, 43, 24, 0.08);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      margin: -8px 0 18px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .outfit-palette h3 {
+      margin: 0 0 8px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .palette-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .palette-chip {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .color-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--swatch);
+      border: 1px solid rgba(77, 43, 24, 0.12);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+      flex: 0 0 auto;
+    }
+
+    .outfit-note {
+      margin: 0;
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
     /* Stepper Timeline */
     .timeline-list {
       position: relative;
@@ -1270,6 +1320,15 @@
       <div class="day-theme-box">
        <p>ถึงสนามบิน + แวะช้อป Rinku Outlets + วัดคัตสึโอจิ (Katsuoji) + Dotonbori</p>
       </div>
+      <div class="outfit-palette">
+       <h3>Outfit Palette</h3>
+       <div class="palette-row">
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #f7f1e5;"></span>Ivory</span>
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #b6252a;"></span>Daruma Red</span>
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #263241;"></span>Dark Denim</span>
+       </div>
+       <p class="outfit-note">วันเดินทาง + วัด + แสงไฟกลางคืน: โทนสว่างหนึ่งชิ้น แล้วให้แดงเป็นจุดเด่นพอ</p>
+      </div>
 
       <div class="timeline-list">
        
@@ -1277,7 +1336,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">08:40</span>
+          <span class="step-time">09:15</span>
           <div class="step-title-group">
            <h4>สนามบิน: KIX Terminal 1</h4>
            <p class="subtitle">เดินทางถึงโอซาก้าและรับสัมภาระ</p>
@@ -1303,7 +1362,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">09:30</span>
+          <span class="step-time">10:05</span>
           <div class="step-title-group">
            <h4>เดินทาง: KIX ➔ Rinku-Town</h4>
            <p class="subtitle">นั่งรถไฟ Nankai / JR เพียง 1 สถานี</p>
@@ -1334,7 +1393,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">09:40</span>
+          <span class="step-time">10:15</span>
           <div class="step-title-group">
            <h4>ช้อปปิ้ง: Rinku Premium Outlets</h4>
            <p class="subtitle">แวะช้อปปิ้งเสื้อผ้ากันหนาว Heattech</p>
@@ -1346,7 +1405,7 @@
            <div class="step-details-content">
             ฝากกระเป๋าเดินทางที่ตู้ล็อคเกอร์ในสถานีรถไฟหรือบริเวณเอาท์เล็ท แล้วช้อปปิ้งเสื้อผ้ากันหนาว
             <div class="micro-badges">
-             <span class="m-badge time">⏱️ ~1.5 - 2 ชม.</span>
+             <span class="m-badge time">⏱️ ~1 - 1.25 ชม.</span>
              <span class="m-badge price">💵 ตามอัธยาศัย</span>
              <span class="m-badge transit">🚶 เดินเท้า</span>
             </div>
@@ -1362,7 +1421,7 @@
          <div class="step-card-header">
           <span class="step-time">11:30</span>
           <div class="step-title-group">
-           <h4>เดินทาง: Rinku-Town ➔ Namba</h4>
+           <h4><a href="https://maps.app.goo.gl/jj4iVd9hxDi3Rckf8" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">เดินทาง: Rinku-Town ➔ Namba</a> ↗</h4>
            <p class="subtitle">เดินทางเข้าเมืองโอซาก้าด้วยรถไฟด่วน Nankai</p>
           </div>
           <span class="chevron-icon">▼</span>
@@ -1380,6 +1439,10 @@
              <span class="m-badge time">⏱️ ~40 นาที</span>
              <span class="m-badge price">💵 ¥790</span>
              <span class="m-badge transit">🚇 Nankai Line</span>
+            </div>
+           
+            <div style="margin-top: 10px;">
+             <a href="https://maps.app.goo.gl/jj4iVd9hxDi3Rckf8" class="btn-action primary-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" style="text-decoration: none; padding: 9px 12px; font-size: 0.82rem; font-weight: 700; width: 100%; display: flex; justify-content: center; align-items: center; gap: 6px;">📍 เปิดเส้นทางบน Google Maps (Rinku ➔ Namba) ↗</a>
             </div>
            </div>
           </div>
@@ -1419,7 +1482,7 @@
          <div class="step-card-header">
           <span class="step-time">12:35</span>
           <div class="step-title-group">
-           <h4>เดินทาง: Namba ➔ Katsuoji</h4>
+           <h4><a href="https://maps.app.goo.gl/omjeRdY7TsaneNe9A" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">เดินทาง: Shinsaibashi / Namba ➔ Katsuoji</a> ↗</h4>
            <p class="subtitle">เดินทางขึ้นเหนือสู่ Minoh ไปวัดคัตสึโอจิ</p>
           </div>
           <span class="chevron-icon">▼</span>
@@ -1440,6 +1503,15 @@
              <span class="m-badge time">⏱️ ~1.5 ชม. (รวมบัส)</span>
              <span class="m-badge price">💵 ¥1,300</span>
              <span class="m-badge transit">🚇 Metro ➔ 🚌 Bus</span>
+            </div>
+           
+            <div style="margin-top: 10px; background: rgba(138, 79, 53, 0.08); border-left: 3px solid var(--primary); padding: 8px 10px; border-radius: 4px; font-size: 0.78rem; line-height: 1.45;">
+             💳 <strong>วิธีชำระค่าโดยสาร (Payment Method):</strong><br>
+             • <strong>รถไฟใต้ดิน Metro:</strong> แตะบัตร IC Card (ICOCA/Suica) หรือบัตร Contactless (Visa/Mastercard) ได้ที่ประตูตรวจตั๋ว<br>
+             • <strong>รถบัส Hankyu:</strong> ใช้บัตร <strong>IC Card (ICOCA/Suica)</strong> แตะตอนขึ้นและแตะตอนลง สะดวกที่สุด หรือจ่ายเงินสด ¥800 (บนรถมีตู้แลกเหรียญเฉพาะแบงก์ ¥1,000 / ไม่รับบัตรเครดิต)
+            </div>
+            <div style="margin-top: 10px;">
+             <a href="https://maps.app.goo.gl/omjeRdY7TsaneNe9A" class="btn-action primary-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" style="text-decoration: none; padding: 9px 12px; font-size: 0.82rem; font-weight: 700; width: 100%; display: flex; justify-content: center; align-items: center; gap: 6px;">📍 เปิดเส้นทางบน Google Maps (Shinsaibashi ➔ Katsuoji) ↗</a>
             </div>
            </div>
           </div>
@@ -1479,7 +1551,7 @@
          <div class="step-card-header">
           <span class="step-time">16:20</span>
           <div class="step-title-group">
-           <h4>เดินทาง: วัดคัตสึโอจิ ➔ Namba</h4>
+           <h4><a href="https://maps.app.goo.gl/bDziRoUrkA5BgsXT9" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">เดินทาง: วัดคัตสึโอจิ ➔ Shinsaibashi / Namba</a> ↗</h4>
            <p class="subtitle">เดินทางย้อนกลับเข้าสู่ย่านใจกลางเมือง</p>
           </div>
           <span class="chevron-icon">▼</span>
@@ -1500,6 +1572,13 @@
              <span class="m-badge time">⏱️ ~1.5 ชม. (รวมบัส)</span>
              <span class="m-badge price">💵 ¥1,300</span>
              <span class="m-badge transit">🚌 Bus ➔ 🚇 Metro</span>
+            </div>
+           
+            <div style="margin-top: 10px; background: rgba(138, 79, 53, 0.08); border-left: 3px solid var(--primary); padding: 8px 10px; border-radius: 4px; font-size: 0.78rem; line-height: 1.45;">
+             💳 <strong>วิธีชำระค่าโดยสาร:</strong> แตะบัตร IC Card (ICOCA/Suica) บนรถบัส Hankyu (แตะขึ้นและแตะลง) แล้วแตะต่อเข้ารถไฟใต้ดิน Minoh-kayano ได้สะดวกทันที
+            </div>
+            <div style="margin-top: 10px;">
+             <a href="https://maps.app.goo.gl/bDziRoUrkA5BgsXT9" class="btn-action primary-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" style="text-decoration: none; padding: 9px 12px; font-size: 0.82rem; font-weight: 700; width: 100%; display: flex; justify-content: center; align-items: center; gap: 6px;">📍 เปิดเส้นทางบน Google Maps (Katsuoji ➔ Shinsaibashi) ↗</a>
             </div>
            </div>
           </div>
@@ -1622,6 +1701,15 @@
      <div class="day-content" id="day-pane-2">
       <div class="day-theme-box">
         <p>Kyoto &amp; Kobe (Arashiyama + Kobe Beef + Nunobiki Ropeway + Harborland)</p>
+       </div>
+       <div class="outfit-palette">
+        <h3>Outfit Palette</h3>
+        <div class="palette-row">
+         <span class="palette-chip"><span class="color-dot" style="--swatch: #5c6b3f;"></span>Bamboo Green</span>
+         <span class="palette-chip"><span class="color-dot" style="--swatch: #efe3cf;"></span>Warm Cream</span>
+         <span class="palette-chip"><span class="color-dot" style="--swatch: #222222;"></span>Black</span>
+        </div>
+        <p class="outfit-note">เข้ากับป่าไผ่ตอนเช้าและโกเบช่วงเย็น ถ่ายรูปง่ายทั้งธรรมชาติ เมือง และวิวอ่าว</p>
        </div>
 
        <div class="timeline-list">
@@ -1827,7 +1915,7 @@
          <div class="step-card-header">
           <span class="step-time">18:45</span>
           <div class="step-title-group">
-           <h4>เดินทาง: Kobe ➔ Osaka-Namba</h4>
+           <h4><a href="https://maps.app.goo.gl/mGzrSLJznELy6yBi8" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">เดินทาง: Kobe ➔ Osaka-Namba</a> ↗</h4>
            <p class="subtitle">นั่งรถไฟด่วน Hanshin Namba Line ยิงตรงรวดเดียว</p>
           </div>
           <span class="chevron-icon">▼</span>
@@ -1845,6 +1933,10 @@
              <span class="m-badge time">⏱️ ~44 นาที</span>
              <span class="m-badge price">💵 ¥420</span>
              <span class="m-badge transit">🚇 Hanshin Line (Direct)</span>
+            </div>
+           
+            <div style="margin-top: 10px;">
+             <a href="https://maps.app.goo.gl/mGzrSLJznELy6yBi8" class="btn-action primary-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" style="text-decoration: none; padding: 9px 12px; font-size: 0.82rem; font-weight: 700; width: 100%; display: flex; justify-content: center; align-items: center; gap: 6px;">📍 เปิดเส้นทางบน Google Maps (Kobe ➔ Namba) ↗</a>
             </div>
            </div>
           </div>
@@ -1889,123 +1981,16 @@
      <!-- DAY 3 CONTENT -->
      <div class="day-content" id="day-pane-3">
       <div class="day-theme-box">
-       <p>Universal Studios Japan (เต็มวัน)</p>
-      </div>
-
-      <div class="timeline-list">
-       
-       <div class="timeline-step">
-        <div class="step-marker"></div>
-        <div class="step-card" onclick="toggleStepDetails(this)">
-         <div class="step-card-header">
-          <span class="step-time">07:30</span>
-          <div class="step-title-group">
-           <h4>เดินทาง: Namba ➔ USJ</h4>
-           <p class="subtitle">เดินทางเช้าเลี่ยงรถไฟคนแน่นหนา</p>
-          </div>
-          <span class="chevron-icon">▼</span>
-         </div>
-         <div class="step-details-wrapper">
-          <div class="step-details">
-           <div class="step-details-content">
-            เดินทางมุ่งหน้าสู่สวนสนุกยูนิเวอร์แซล สตูดิโอส์ เจแปน (USJ)
-            <div class="sub-timeline-box">
-             <div class="sub-route-item selected">
-              <strong>1. Hanshin Namba Line:</strong> Osaka-Namba Station ➔ Nishikujo Station (8 นาที / 💵 ¥220)
-             </div>
-             <div class="sub-route-item selected">
-              <strong>2. JR Yumesaki Line:</strong> Nishikujo Station ➔ Universal City Station (6 นาที / 💵 ¥160)
-             </div>
-             <div class="sub-route-item selected">
-              <strong>3. Walk:</strong> Universal City Station ➔ Universal Studios Japan (เดินเท้า ~3-5 นาที)
-             </div>
-            </div>
-            <div class="micro-badges">
-             <span class="m-badge time">⏱️ ~30 นาที</span>
-             <span class="m-badge price">💵 ¥380</span>
-             <span class="m-badge transit">🚇 Hanshin Line ➔ JR Line</span>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
-
-       <div class="timeline-step">
-        <div class="step-marker"></div>
-        <div class="step-card" onclick="toggleStepDetails(this)">
-         <div class="step-card-header">
-          <span class="step-time">08:00</span>
-          <div class="step-title-group">
-           <h4>สถานที่: Universal Studios Japan</h4>
-           <p class="subtitle">ลุยเครื่องเล่นแฮร์รี่ พอตเตอร์ และมาริโอ้</p>
-          </div>
-          <span class="chevron-icon">▼</span>
-         </div>
-         <div class="step-details-wrapper">
-          <div class="step-details">
-           <div class="step-details-content">
-            สนุกสนานกับโซนต่างๆ ทั้งเครื่องเล่นยอดฮิตและการแสดงระดับโลกตลอดวัน เดินเท้าเพียง 3-5 นาทีจากสถานีรถไฟเข้าสวนสนุก
-            <div class="micro-badges">
-             <span class="m-badge time">⏱️ ทั้งวัน (12 ชม.)</span>
-             <span class="m-badge price">💵 ตามบัตร USJ</span>
-             <span class="m-badge transit">🚶 เดินเท้า</span>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
-
-       <div class="timeline-step">
-        <div class="step-marker"></div>
-        <div class="step-card" onclick="toggleStepDetails(this)">
-         <div class="step-card-header">
-          <span class="step-time">20:00</span>
-          <div class="step-title-group">
-           <h4>เดินทาง: กลับที่พัก Namba</h4>
-           <p class="subtitle">เดินทางกลับตามวิธีขาไปย้อนหลัง</p>
-          </div>
-          <span class="chevron-icon">▼</span>
-         </div>
-         <div class="step-details-wrapper">
-          <div class="step-details">
-           <div class="step-details-content">
-            เดินทางกลับจากสวนสนุกย้อนกลับเข้าย่านที่พักนัมบะ
-            <div class="sub-timeline-box">
-             <div class="sub-route-item selected">
-              <strong>1. Walk:</strong> Universal Studios Japan ➔ Universal City Station (เดินเท้า ~3-5 นาที)
-             </div>
-             <div class="sub-route-item selected">
-              <strong>2. JR Yumesaki Line:</strong> Universal City Station ➔ Nishikujo Station (6 นาที / 💵 ¥160)
-             </div>
-             <div class="sub-route-item selected">
-              <strong>3. Hanshin Namba Line:</strong> Nishikujo Station ➔ Osaka-Namba Station (8 นาที / 💵 ¥220)
-             </div>
-            </div>
-            <div class="micro-badges">
-             <span class="m-badge time">⏱️ ~30 นาที</span>
-             <span class="m-badge price">💵 ¥380</span>
-             <span class="m-badge transit">🚇 JR Line ➔ Hanshin Line</span>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
-
-      </div>
-
-      <div class="daily-cost-card">
-       <span>💰</span>
-       <span>ค่าเดินทางวันนี้: ~¥760 / คน</span>
-      </div>
-     </div>
-
-     <!-- DAY 4 CONTENT -->
-     <div class="day-content" id="day-pane-4">
-      <div class="day-theme-box">
        <p>ตลาดปลาคิซุ (Kizu Market) + พิพิธภัณฑ์สัตว์น้ำ Kaiyukan + Tempozan + MooKEN</p>
+      </div>
+      <div class="outfit-palette">
+       <h3>Outfit Palette</h3>
+       <div class="palette-row">
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #315f73;"></span>Sea Blue</span>
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #f5f7f4;"></span>White</span>
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #3a3a35;"></span>Charcoal</span>
+       </div>
+       <p class="outfit-note">ตลาดเช้า + อควาเรียม + ริมอ่าว: โทนทะเลสุภาพ ใส่แล้วเข้ากับพื้นหลังน้ำและกระจก</p>
       </div>
 
       <div class="timeline-list">
@@ -2263,10 +2248,147 @@
       </div>
      </div>
 
+     <!-- DAY 4 CONTENT -->
+     <div class="day-content" id="day-pane-4">
+      <div class="day-theme-box">
+       <p>Universal Studios Japan (เต็มวัน)</p>
+      </div>
+      <div class="outfit-palette">
+       <h3>Outfit Palette</h3>
+       <div class="palette-row">
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #1f1f23;"></span>Black</span>
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #c73332;"></span>Pop Red</span>
+       </div>
+       <p class="outfit-note">สวนสนุกทั้งวัน: ใช้สีหลักน้อยๆ แต่มีแดงช่วยให้รูปดูสนุกโดยไม่เยอะเกิน</p>
+      </div>
+
+      <div class="timeline-list">
+       
+       <div class="timeline-step">
+        <div class="step-marker"></div>
+        <div class="step-card" onclick="toggleStepDetails(this)">
+         <div class="step-card-header">
+          <span class="step-time">07:30</span>
+          <div class="step-title-group">
+           <h4><a href="https://maps.app.goo.gl/2W3MHx9E1tTW41veA" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">เดินทาง: Namba ➔ USJ</a> ↗</h4>
+           <p class="subtitle">เดินทางเช้าเลี่ยงรถไฟคนแน่นหนา</p>
+          </div>
+          <span class="chevron-icon">▼</span>
+         </div>
+         <div class="step-details-wrapper">
+          <div class="step-details">
+           <div class="step-details-content">
+            เดินทางมุ่งหน้าสู่สวนสนุกยูนิเวอร์แซล สตูดิโอส์ เจแปน (USJ)
+            <div class="sub-timeline-box">
+             <div class="sub-route-item selected">
+              <strong>1. Hanshin Namba Line:</strong> Osaka-Namba Station ➔ Nishikujo Station (8 นาที / 💵 ¥220)
+             </div>
+             <div class="sub-route-item selected">
+              <strong>2. JR Yumesaki Line:</strong> Nishikujo Station ➔ Universal City Station (6 นาที / 💵 ¥160)
+             </div>
+             <div class="sub-route-item selected">
+              <strong>3. Walk:</strong> Universal City Station ➔ Universal Studios Japan (เดินเท้า ~3-5 นาที)
+             </div>
+            </div>
+            <div class="micro-badges">
+             <span class="m-badge time">⏱️ ~30 นาที</span>
+             <span class="m-badge price">💵 ¥380</span>
+             <span class="m-badge transit">🚇 Hanshin Line ➔ JR Line</span>
+            </div>
+           
+            <div style="margin-top: 10px;">
+             <a href="https://maps.app.goo.gl/2W3MHx9E1tTW41veA" class="btn-action primary-btn" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" style="text-decoration: none; padding: 9px 12px; font-size: 0.82rem; font-weight: 700; width: 100%; display: flex; justify-content: center; align-items: center; gap: 6px;">📍 เปิดเส้นทางบน Google Maps (Namba ➔ USJ) ↗</a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="timeline-step">
+        <div class="step-marker"></div>
+        <div class="step-card" onclick="toggleStepDetails(this)">
+         <div class="step-card-header">
+          <span class="step-time">08:00</span>
+          <div class="step-title-group">
+           <h4>สถานที่: Universal Studios Japan</h4>
+           <p class="subtitle">ลุยเครื่องเล่นแฮร์รี่ พอตเตอร์ และมาริโอ้</p>
+          </div>
+          <span class="chevron-icon">▼</span>
+         </div>
+         <div class="step-details-wrapper">
+          <div class="step-details">
+           <div class="step-details-content">
+            สนุกสนานกับโซนต่างๆ ทั้งเครื่องเล่นยอดฮิตและการแสดงระดับโลกตลอดวัน เดินเท้าเพียง 3-5 นาทีจากสถานีรถไฟเข้าสวนสนุก
+            <div class="micro-badges">
+             <span class="m-badge time">⏱️ ทั้งวัน (12 ชม.)</span>
+             <span class="m-badge price">💵 ตามบัตร USJ</span>
+             <span class="m-badge transit">🚶 เดินเท้า</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="timeline-step">
+        <div class="step-marker"></div>
+        <div class="step-card" onclick="toggleStepDetails(this)">
+         <div class="step-card-header">
+          <span class="step-time">20:00</span>
+          <div class="step-title-group">
+           <h4>เดินทาง: กลับที่พัก Namba</h4>
+           <p class="subtitle">เดินทางกลับตามวิธีขาไปย้อนหลัง</p>
+          </div>
+          <span class="chevron-icon">▼</span>
+         </div>
+         <div class="step-details-wrapper">
+          <div class="step-details">
+           <div class="step-details-content">
+            เดินทางกลับจากสวนสนุกย้อนกลับเข้าย่านที่พักนัมบะ
+            <div class="sub-timeline-box">
+             <div class="sub-route-item selected">
+              <strong>1. Walk:</strong> Universal Studios Japan ➔ Universal City Station (เดินเท้า ~3-5 นาที)
+             </div>
+             <div class="sub-route-item selected">
+              <strong>2. JR Yumesaki Line:</strong> Universal City Station ➔ Nishikujo Station (6 นาที / 💵 ¥160)
+             </div>
+             <div class="sub-route-item selected">
+              <strong>3. Hanshin Namba Line:</strong> Nishikujo Station ➔ Osaka-Namba Station (8 นาที / 💵 ¥220)
+             </div>
+            </div>
+            <div class="micro-badges">
+             <span class="m-badge time">⏱️ ~30 นาที</span>
+             <span class="m-badge price">💵 ¥380</span>
+             <span class="m-badge transit">🚇 JR Line ➔ Hanshin Line</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+      </div>
+
+      <div class="daily-cost-card">
+       <span>💰</span>
+       <span>ค่าเดินทางวันนี้: ~¥760 / คน</span>
+      </div>
+     </div>
+
      <!-- DAY 5 CONTENT -->
      <div class="day-content" id="day-pane-5">
       <div class="day-theme-box">
        <p>ช้อปปิ้งส่งท้ายในโอซาก้า + ย้ายโรงแรมไปใกล้สนามบิน KIX</p>
+      </div>
+      <div class="outfit-palette">
+       <h3>Outfit Palette</h3>
+       <div class="palette-row">
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #efe3cf;"></span>Warm Cream</span>
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #263241;"></span>Dark Denim</span>
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #f5f7f4;"></span>White</span>
+       </div>
+       <p class="outfit-note">ช้อปปิ้งและย้ายโรงแรม: ใช้โทนเดิมที่แมตช์ง่าย คล่องตัว และถ่ายกับ Marble Beach ได้ดี</p>
       </div>
 
       <div class="timeline-list">
@@ -2538,6 +2660,14 @@
       <div class="day-theme-box">
        <p>เดินทางกลับประเทศไทยโดยสวัสดิภาพ</p>
       </div>
+      <div class="outfit-palette">
+       <h3>Outfit Palette</h3>
+       <div class="palette-row">
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #3a3a35;"></span>Charcoal</span>
+        <span class="palette-chip"><span class="color-dot" style="--swatch: #f7f1e5;"></span>Ivory</span>
+       </div>
+       <p class="outfit-note">วันบินกลับ: เรียบ สบาย ไม่ต้องคิดเยอะ และดูสะอาดในรูปสนามบิน</p>
+      </div>
 
       <div class="timeline-list">
        
@@ -2545,7 +2675,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">07:00</span>
+          <span class="step-time">07:35</span>
           <div class="step-title-group">
            <h4>เดินทาง: โรงแรม ➔ Terminal 1</h4>
            <p class="subtitle">เดินลากสัมภาระข้ามสะพานเชื่อม</p>
@@ -2571,7 +2701,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">07:15</span>
+          <span class="step-time">07:50</span>
           <div class="step-title-group">
            <h4>สนามบิน: เคาน์เตอร์เช็กอิน</h4>
            <p class="subtitle">โหลดกระเป๋าสัมภาระและผ่านด่านขาออก</p>
@@ -2597,7 +2727,7 @@
         <div class="step-marker"></div>
         <div class="step-card" onclick="toggleStepDetails(this)">
          <div class="step-card-header">
-          <span class="step-time">09:55</span>
+          <span class="step-time">10:30</span>
           <div class="step-title-group">
            <h4>เดินทาง: KIX ➔ DMK</h4>
            <p class="subtitle">ออกเดินทางกลับประเทศไทย (XJ613)</p>
@@ -2607,7 +2737,7 @@
          <div class="step-details-wrapper">
           <div class="step-details">
            <div class="step-details-content">
-            ออกเดินทางข้ามประเทศจากท่าอากาศยานคันไซ บินตรงถึงดอนเมือง ประเทศไทย เวลาประมาณ 14:25 น. อย่างปลอดภัย
+            ออกเดินทางข้ามประเทศจากท่าอากาศยานคันไซ บินตรงถึงดอนเมือง ประเทศไทย เวลาประมาณ 15:05 น. อย่างปลอดภัย
             <div class="micro-badges">
              <span class="m-badge time">⏱️ ~6.5 ชม.</span>
              <span class="m-badge price">💵 รวมในตั๋วแล้ว</span>
@@ -2663,7 +2793,7 @@
           <span class="terminal">Terminal 1</span>
          </div>
          <div class="t-path">
-          <span class="duration">⏱️ 5 ชม. 45 นาที</span>
+          <span class="duration">⏱️ 5 ชม. 35 นาที</span>
           <div class="t-line"></div>
          </div>
          <div class="t-airport text-right">
@@ -2679,11 +2809,11 @@
          </div>
          <div class="t-grid-item">
           <span class="label">DEP / ออก</span>
-          <span class="val">00:55 น.</span>
+          <span class="val">01:40 น.</span>
          </div>
          <div class="t-grid-item">
           <span class="label">ARR / ถึง</span>
-          <span class="val">08:40 น.</span>
+          <span class="val">09:15 น.</span>
          </div>
         </div>
        </div>
@@ -2694,7 +2824,7 @@
          <span class="pass-route">DMK ➔ KIX</span>
          <span class="pass-meta">
           FLIGHT: <strong>XJ612</strong><br>
-          DATE: <strong>7 Nov</strong> | DEP: <strong>00:55</strong>
+          DATE: <strong>7 Nov</strong> | DEP: <strong>01:40</strong>
          </span>
         </div>
         <div class="t-stub-right">
@@ -2721,7 +2851,7 @@
           <span class="terminal">Terminal 1</span>
          </div>
          <div class="t-path">
-          <span class="duration">⏱️ 6 ชม. 30 นาที</span>
+          <span class="duration">⏱️ 6 ชม. 35 นาที</span>
           <div class="t-line"></div>
          </div>
          <div class="t-airport text-right">
@@ -2737,11 +2867,11 @@
          </div>
          <div class="t-grid-item">
           <span class="label">DEP / ออก</span>
-          <span class="val">09:55 น.</span>
+          <span class="val">10:30 น.</span>
          </div>
          <div class="t-grid-item">
           <span class="label">ARR / ถึง</span>
-          <span class="val">14:25 น.</span>
+          <span class="val">15:05 น.</span>
          </div>
         </div>
        </div>
@@ -2752,7 +2882,7 @@
          <span class="pass-route">KIX ➔ DMK</span>
          <span class="pass-meta">
           FLIGHT: <strong>XJ613</strong><br>
-          DATE: <strong>12 Nov</strong> | DEP: <strong>09:55</strong>
+          DATE: <strong>12 Nov</strong> | DEP: <strong>10:30</strong>
          </span>
         </div>
         <div class="t-stub-right">
@@ -3029,19 +3159,19 @@
       <div class="fare-row">
        <div class="fare-day">Day 3</div>
        <div class="fare-desc-box">
-        <h5>Namba ⇄ USJ (สวนสนุก)</h5>
-        <p>Hanshin Namba Line + JR Yumesaki Line</p>
+        <h5>Kizu Market + Kaiyukan (ตลาดปลา &amp; อควาเรียม)</h5>
+        <p>Osaka Metro (Midosuji &amp; Chuo Line)</p>
        </div>
-       <div class="fare-cost">¥760</div>
+       <div class="fare-cost">¥770</div>
       </div>
 
       <div class="fare-row">
        <div class="fare-day">Day 4</div>
        <div class="fare-desc-box">
-        <h5>Kizu Market + Kaiyukan (ตลาดปลา &amp; อควาเรียม)</h5>
-        <p>Osaka Metro (Midosuji &amp; Chuo Line)</p>
+        <h5>Namba ⇄ USJ (สวนสนุก)</h5>
+        <p>Hanshin Namba Line + JR Yumesaki Line</p>
        </div>
-       <div class="fare-cost">¥770</div>
+       <div class="fare-cost">¥760</div>
       </div>
 
       <div class="fare-row">
