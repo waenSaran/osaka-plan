@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant Booking | Osaka Trip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf9f1; --bg2:#f5f1dc; --card:#ffffff; --ink:#4d2b18; --muted:#736257;
+  --primary:#8a4f35; --line:rgba(77,43,24,.10); --shadow:0 8px 24px rgba(103,89,58,.10);
+  --must:#bd1731; --must-bg:#fde3e6; --call:#b07a12; --call-bg:#fbefcf; --ok:#3d7a3a; --ok-bg:#e3f1dc; --btn:#8a4f35; --btn-ink:#fff;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#1d1612; --bg2:#271d17; --card:#2a211b; --ink:#f3e7dc; --muted:#c1ad9d; --primary:#e0a98a; --line:rgba(243,231,220,.14);
+    --must:#ff8b9b; --must-bg:#471a22; --call:#f0c566; --call-bg:#40330f; --ok:#8fd18a; --ok-bg:#22381f; --btn:#e0a98a; --btn-ink:#2a1a10; --shadow:0 8px 24px rgba(0,0,0,.35);}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans Thai",system-ui,sans-serif;font-size:15px;line-height:1.55}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px 56px}
+h1{font-family:Kanit,sans-serif;font-size:1.5rem;margin:4px 0}
+h2{font-family:Kanit,sans-serif;font-size:1.05rem;margin:22px 0 8px}
+.sub{color:var(--muted);font-size:.86rem;margin:0 0 12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin:12px 0;box-shadow:var(--shadow)}
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.name{font-family:Kanit,sans-serif;font-size:1.05rem;font-weight:600}
+.when{color:var(--muted);font-size:.82rem}
+.tag{flex:none;border-radius:999px;padding:3px 10px;font-size:.74rem;font-weight:700;white-space:nowrap}
+.must{background:var(--must-bg);color:var(--must)} .call{background:var(--call-bg);color:var(--call)} .ok{background:var(--ok-bg);color:var(--ok)}
+ul{margin:10px 0 0;padding-left:18px;font-size:.86rem}
+li{margin:3px 0}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.btn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:var(--btn);color:var(--btn-ink);font-weight:700;font-size:.82rem;border-radius:12px;padding:9px 14px}
+.btn.alt{background:var(--bg2);color:var(--ink);border:1px solid var(--line)}
+.note{font-size:.8rem;color:var(--muted)}
+.tpl{background:var(--bg2);border-radius:12px;padding:12px;font-size:.82rem;white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;margin-top:8px}
+button.copy{margin-top:8px;border:0;border-radius:10px;padding:8px 14px;font-weight:700;background:var(--btn);color:var(--btn-ink);font-family:inherit;cursor:pointer}
+table{width:100%;border-collapse:collapse;font-size:.84rem}
+td,th{text-align:left;padding:7px 4px;border-bottom:1px solid var(--line)}
+a{color:var(--primary)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html" style="font-size:.84rem">← กลับไปแผนเที่ยว</a>
+  <h1>🍽️ ร้านที่ควรจองก่อนไป</h1>
+  <p class="sub">เรียงตามวันที่ไป ข้อมูลมาจากหน้าจองและรีวิวที่ค้นไว้ ผมยังไม่ได้ลองจองจริง ควรเช็กรายละเอียดตอนจองอีกครั้ง</p>
+
+  <div class="card">
+    <strong>ทิปสำหรับคนไทย</strong>
+    <ul>
+      <li>เวลาญี่ปุ่นเร็วกว่าไทย <strong>2 ชม.</strong> (เช่น 13:00 ญี่ปุ่น = 11:00 ไทย)</li>
+      <li>โทรจากไทยกด <strong>+81</strong> แล้วตัดเลข 0 ตัวหน้าออก เช่น 06-6211-4455 → <strong>+81 6-6211-4455</strong></li>
+      <li>เว็บจองด้านล่างมีหน้าภาษาอังกฤษ ใส่ชื่อตามพาสปอร์ต: SIRAPASSORN KRAJANGPHO และ SARANYA HIRANSATAKUN</li>
+      <li>ถ้าโทรไม่ถนัด ให้โรงแรม Welina ช่วยโทรจอง</li>
+      <li>ยกเลิกวันเดียวกันบางร้านเก็บเงินเต็ม ควรแจ้งล่วงหน้าถ้าเปลี่ยนแผน</li>
+    </ul>
+  </div>
+
+  <h2>เสาร์ 7 Nov</h2>
+  <div class="card">
+    <div class="head"><div><div class="name">Nikoniko Nabe Dotonbori</div><div class="when">มื้อเย็น 19:15 · ชาบู/สุกี้บุฟเฟ่ต์</div></div><span class="tag must">ควรจอง</span></div>
+    <ul>
+      <li>เสาร์ย่านโดทนโบริแน่น จองล่วงหน้าปลอดภัยกว่า</li>
+      <li>จองกับ Musement ต้องไปอย่างน้อย 2 ผู้ใหญ่ ยกเลิกคืนเงินได้ถึง 4 วันก่อน</li>
+      <li>ร้านเปิด 12:00–24:00</li>
+    </ul>
+    <div class="btns">
+      <a class="btn" href="https://gurunavi.com/en/keex600/rst" target="_blank" rel="noopener">จองผ่าน Gurunavi ↗</a>
+      <a class="btn alt" href="https://tripsora.musement.com/uk/osaka/wagyu-and-crab-all-you-can-eat-experience-at-nikoniko-nabe-in-osaka-475637" target="_blank" rel="noopener">จองผ่าน Musement ↗</a>
+      <a class="btn alt" href="tel:+81662114455">โทร +81 6-6211-4455</a>
+    </div>
+  </div>
+
+  <h2>อาทิตย์ 8 Nov</h2>
+  <div class="card">
+    <div class="head"><div><div class="name">Steakland Kobe</div><div class="when">มื้อกลางวัน 12:15 · เนื้อโกเบ ~¥3,500–4,900</div></div><span class="tag call">โทรจอง</span></div>
+    <ul>
+      <li>ใช้เบอร์ของสาขา Kobe-kan เป็นหลัก ผมไม่ยืนยันว่ารับจองให้ร้านที่ 1-8-2 Kitanagasadori ด้วย</li>
+      <li>เวลาทำการจากเว็บรีวิวไม่ตรงกัน ควรถามตอนโทร และถามว่าเมนูไหนเป็นเนื้อโกเบ</li>
+    </ul>
+    <div class="btns"><a class="btn" href="tel:+81783322900">โทร +81 78-332-2900</a></div>
+  </div>
+  <div class="card">
+    <div class="head"><div><div class="name">Hozenji Yamakazu</div><div class="when">มื้อเย็น 19:45 · ข้าวหน้าปลาไหลย่าง</div></div><span class="tag must">ควรจอง</span></div>
+    <ul>
+      <li>จองออนไลน์วันเดียวกันได้ถึง 15:00 สำหรับมื้อเย็น หลังจากนั้นต้องโทร (06-6211-5800)</li>
+      <li>ยกเลิกวันเดียวกันโดนค่าธรรมเนียม 100% ถ้ามาช้าร้านเก็บที่ไว้ 30 นาที</li>
+      <li>ร้านมีบันไดชัน ถ้าต้องการชั้น 1 ให้เขียนในช่องหมายเหตุ</li>
+      <li>เมนูหลักบางรายการอาจแพงกว่าที่ประเมินไว้ (มีประกาศเก่าบอกเมนูข้าวหน้าปลาไหลกับเม่นทะเลราคา ¥16,000) ดูเมนูตอนจอง</li>
+    </ul>
+    <div class="btns">
+      <a class="btn" href="https://www.tablecheck.com/en/shops/hozenji-yamakazu/reserve" target="_blank" rel="noopener">จองผ่าน TableCheck ↗</a>
+      <a class="btn alt" href="tel:+81662115800">โทร +81 6-6211-5800</a>
+    </div>
+  </div>
+
+  <h2>จันทร์ 9 Nov</h2>
+  <div class="card">
+    <div class="head"><div><div class="name">Rokunomiya (ยากินิกุบุฟเฟ่ต์)</div><div class="when">มื้อเย็น 17:45 · ¥7,500 (90 นาที) / ¥8,000 (120 นาที)</div></div><span class="tag must">ควรจอง</span></div>
+    <ul>
+      <li>ตอนจองให้ถามว่ามีเวลาจำกัดอย่างไร มีรีวิวบอกว่าสาขา Dotonbori ไล่ลูกค้าที่ไม่เลือกบุฟเฟ่ต์ให้ออกใน 60 นาที</li>
+      <li>เปิด 11:00–01:00</li>
+    </ul>
+    <div class="btns">
+      <a class="btn" href="https://gurunavi.com/en/keg5700/rev/rst" target="_blank" rel="noopener">จองผ่าน Gurunavi ↗</a>
+      <a class="btn alt" href="tel:+818040226686">โทร +81 80-4022-6686</a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="head"><div><div class="name">Rikimaru Dotonbori (ตัวเลือกที่ถูกกว่า)</div><div class="when">¥3,498 / ¥4,158 / ¥5,478 ตามคอร์ส (ราคาปี 2023)</div></div><span class="tag call">โทรจองเท่านั้น</span></div>
+    <ul>
+      <li>ไม่รับจองออนไลน์ ติดต่อได้ 13:00–23:00 เวลาญี่ปุ่น (= 11:00–21:00 เวลาไทย)</li>
+      <li>เปิดถึง 01:00 เดินจาก Rokunomiya ~2 นาที เปลี่ยนใจหน้าร้านได้</li>
+    </ul>
+    <div class="btns"><a class="btn" href="tel:+81662116619">โทร +81 6-6211-6619</a></div>
+  </div>
+
+  <h2>อังคาร 10 Nov</h2>
+  <div class="card">
+    <div class="head"><div><div class="name">Kaiten Sushi Ginza Onodera</div><div class="when">มื้อเย็น ~21:00 · ปิด 22:00</div></div><span class="tag call">ไม่แน่ใจ</span></div>
+    <ul>
+      <li>แหล่งข้อมูลบอกไม่ตรงกัน บางแหล่งว่ากดบัตรคิวหน้าร้าน บางแหล่งว่าจองออนไลน์ได้ ผมไม่ยืนยัน</li>
+      <li>ถ้าลงจาก USJ ช้า ใช้ตัวเลือกเสริมในแผน เช่น Gokai (เปิดถึง 23:00)</li>
+    </ul>
+  </div>
+
+  <h2>ไม่ต้องจอง เดินเข้าไปได้เลย</h2>
+  <div class="card">
+    <table>
+      <tr><td>Onigiri Gorichan</td><td>เสาร์ ซื้อกลับ</td></tr>
+      <tr><td>Takoyaki Wanaka</td><td>เสาร์ ปิด 21:00</td></tr>
+      <tr><td>Kannonya</td><td>อาทิตย์ ปิด 21:00</td></tr>
+      <tr><td>Ichiran Dotonbori</td><td>อังคาร เปิด 24 ชม.</td></tr>
+      <tr><td>Hanamaruken Hozenji</td><td>พุธ เปิด 24 ชม.</td></tr>
+      <tr><td>MooKEN</td><td>พุธ 12:15 เปิด 11:00–15:00 ของอาจหมดช่วงบ่าย</td></tr>
+      <tr><td>Rikuro's Namba</td><td>พุธ เปิด 09:00–20:00</td></tr>
+    </table>
+    <p class="note" style="margin:10px 0 0">ผมยังไม่ได้เช็กนโยบายจองของ Gokai และ Sashisu (ตัวเลือกเสริมวันอังคาร)</p>
+  </div>
+
+  <h2>ข้อความภาษาอังกฤษสำหรับจอง / ให้โรงแรมโทร</h2>
+  <div class="card">
+    <div class="tpl" id="tpl">Hello, I would like to make a reservation.
+Date: [DATE]
+Time: [TIME]
+Number of guests: 2 adults
+Name: SARANYA HIRANSATAKUN
+Restaurant: [RESTAURANT]
+Please let me know if the table is confirmed. Thank you.</div>
+    <button class="copy" id="copy">คัดลอกข้อความ</button>
+  </div>
+</div>
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var t=document.getElementById('tpl').innerText, b=this;
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='คัดลอกแล้ว'}).catch(function(){b.textContent='คัดลอกไม่ได้ ลองเลือกข้อความเอง'});
+  setTimeout(function(){b.textContent='คัดลอกข้อความ'},2000);
+});
+</script>
+</body>
+</html>
